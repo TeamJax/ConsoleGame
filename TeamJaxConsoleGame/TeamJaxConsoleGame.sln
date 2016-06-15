@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamJaxConsoleGame.Lib", "TeamJaxConsoleGame.Lib\TeamJaxConsoleGame.Lib.csproj", "{28CB667C-9AFD-4DF6-B9C8-64C26E2CB9CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamJaxConsoleGame.Game", "TeamJaxConsoleGame.Game\TeamJaxConsoleGame.Game.csproj", "{BC9527F3-719C-4289-BF09-DBB674B6E91B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{28CB667C-9AFD-4DF6-B9C8-64C26E2CB9CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28CB667C-9AFD-4DF6-B9C8-64C26E2CB9CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28CB667C-9AFD-4DF6-B9C8-64C26E2CB9CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28CB667C-9AFD-4DF6-B9C8-64C26E2CB9CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC9527F3-719C-4289-BF09-DBB674B6E91B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC9527F3-719C-4289-BF09-DBB674B6E91B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC9527F3-719C-4289-BF09-DBB674B6E91B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC9527F3-719C-4289-BF09-DBB674B6E91B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
