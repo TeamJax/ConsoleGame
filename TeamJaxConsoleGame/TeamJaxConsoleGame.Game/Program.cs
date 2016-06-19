@@ -18,9 +18,7 @@ namespace TeamJaxConsoleGame.Game
         {
             var gameEngine = new Engine();
             gameEngine.Run();
-
-
         }
+        //Testing GitHub
     }
-    //Testing GitHub
 }
