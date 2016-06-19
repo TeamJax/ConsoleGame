@@ -40,6 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\GameObject.cs" />
+    <Compile Include="Entities\Hero.cs" />
+    <Compile Include="Entities\Item.cs" />
+    <Compile Include="Entities\Person.cs" />
+    <Compile Include="Entities\Skill.cs" />
+    <Compile Include="Enumerations\ItemType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
