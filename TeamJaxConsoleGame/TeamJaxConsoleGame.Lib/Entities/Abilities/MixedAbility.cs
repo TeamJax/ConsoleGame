@@ -11,7 +11,7 @@
 
         public override void UseAbility(Hero targetHero)
         {
-            //todo
+            //todo damage target, heal self
         }
     }
 }
