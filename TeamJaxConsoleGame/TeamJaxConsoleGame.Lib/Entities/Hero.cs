@@ -2,9 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
+    using Skills;
 
     public class Hero : Person
     {
@@ -14,6 +12,5 @@
         }
 
         public IList<Skill> Skills { get; set; }
-
     }
 }

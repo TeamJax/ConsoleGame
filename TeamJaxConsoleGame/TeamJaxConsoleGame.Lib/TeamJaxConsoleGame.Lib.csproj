@@ -40,17 +40,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Abilities\Abstract\Ability.cs" />
+    <Compile Include="Entities\Abilities\DamageAbility.cs" />
+    <Compile Include="Entities\Abilities\HealAbility.cs" />
+    <Compile Include="Entities\Abilities\MixedAbility.cs" />
+    <Compile Include="Entities\Attacks\Abstract\Attack.cs" />
     <Compile Include="Entities\GameObject.cs" />
     <Compile Include="Entities\Hero.cs" />
     <Compile Include="Entities\Item.cs" />
     <Compile Include="Entities\Person.cs" />
-    <Compile Include="Entities\Skill.cs" />
+    <Compile Include="Entities\Skills\Abstract\Skill.cs" />
+    <Compile Include="Enumerations\AbilityType.cs" />
     <Compile Include="Enumerations\ItemType.cs" />
+    <Compile Include="Interfaces\Abilities\IDamagable.cs" />
+    <Compile Include="Interfaces\Abilities\IHealable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ExtensionMethods\" />
-    <Folder Include="Interfaces\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

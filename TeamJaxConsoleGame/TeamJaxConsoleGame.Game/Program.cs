@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TeamJaxConsoleGame.Game
+﻿namespace TeamJaxConsoleGame.Game
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+
     /// <summary>
     /// Class for the main entry point of the program.
     /// </summary>
@@ -19,6 +19,5 @@ namespace TeamJaxConsoleGame.Game
             var gameEngine = new Engine();
             gameEngine.Run();
         }
-        //Testing GitHub
     }
 }
