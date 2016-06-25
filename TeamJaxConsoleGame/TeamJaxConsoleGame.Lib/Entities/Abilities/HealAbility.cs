@@ -1,11 +1,12 @@
 ﻿namespace TeamJaxConsoleGame.Lib.Entities.Abilities
 {
     using System;
+    using Enumerations;
 
     public class HealAbility : Ability
     {
-        public HealAbility(string name, int resourceCost, int power, string description = null)
-            : base(name, resourceCost, power, description)
+        public HealAbility(string name, AbilityType type, int resourceCost, int abilityPower, string description = null) 
+            : base(name, type, resourceCost, abilityPower, description)
         {
         }
 

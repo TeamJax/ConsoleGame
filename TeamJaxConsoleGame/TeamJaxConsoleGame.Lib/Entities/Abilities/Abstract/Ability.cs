@@ -10,9 +10,10 @@
         private int abilityPower;
         private string description;
 
-        public Ability(string name, int resourceCost, int abilityPower, string description = null)           
+        public Ability(string name, AbilityType type, int resourceCost, int abilityPower, string description = null)           
         {
             this.Name = name;
+            this.Type = type;
             this.ResourceCost = resourceCost;
             this.AbilityPower = abilityPower;
             this.Description = description;
