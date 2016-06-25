@@ -2,9 +2,8 @@
 {
     using System;
     using Enumerations;
-    using Interfaces.Abilities;
 
-    public abstract class Ability : GameObject, IDamagable<Ability>, IHealable<Ability>
+    public abstract class Ability : GameObject
     {
         private AbilityType type;
         private int resourceCost;
@@ -12,10 +11,12 @@
         private double healAmount;
         private string description;
 
-        public Ability(string name, int resourceCost, string description = null)           
+        public Ability(string name, int resourceCost, double damageAmount, double healAmount, string description = null)           
         {
             this.Name = name;
             this.ResourceCost = resourceCost;
+            this.DamageAmount = damageAmount;
+            this.HealAmount = healAmount;
             this.Description = description;
         }
 
@@ -67,16 +68,42 @@
             }
         }
 
-        public abstract void UseAbility();
-
-        public virtual Ability DamageAmount(double amount)
+        public double DamageAmount
         {
-            throw new NotImplementedException();
+            get
+            {
+                return this.damageAmount;
+            }
+
+            set
+            {
+                if(value < 0)
+                {
+                    throw new ArgumentException("Ability damage cannot be negative!");
+                }
+
+                this.damageAmount = value;
+            }
         }
 
-        public Ability HealAmount(double amount)
+        public double HealAmount
         {
-            throw new NotImplementedException();
+            get
+            {
+                return this.healAmount;
+            }
+
+            set
+            {
+                if(value < 0)
+                {
+                    throw new ArgumentException("Ability Heal ammount cannot be negative!");
+                }
+
+                this.healAmount = value;
+            }
         }
+
+        public abstract void UseAbility();     
     }
 }

@@ -1,12 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TeamJaxConsoleGame.Lib.Entities.Abilities
+﻿namespace TeamJaxConsoleGame.Lib.Entities.Abilities
 {
-    class DamageAbility
+    using System;
+
+    public class DamageAbility : Ability
     {
+        public DamageAbility(string name, int resourceCost, string description = null) : base(name, resourceCost, description)
+        {
+
+        }
+
+        public override void UseAbility()
+        {
+            
+        }
     }
 }
