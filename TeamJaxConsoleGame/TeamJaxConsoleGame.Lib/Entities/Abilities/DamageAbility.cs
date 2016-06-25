@@ -4,14 +4,16 @@
 
     public class DamageAbility : Ability
     {
-        public DamageAbility(string name, int resourceCost, string description = null) : base(name, resourceCost, description)
+        public DamageAbility(string name, int resourceCost, int power, string description = null) 
+            : base(name, resourceCost, power, description)
         {
-
         }
 
-        public override void UseAbility()
+        public override void UseAbility(Hero targetHero)
         {
+            var inflictedDamage = 0; //add formula   
             
+            targetHero.Health -= inflictedDamage;
         }
     }
 }

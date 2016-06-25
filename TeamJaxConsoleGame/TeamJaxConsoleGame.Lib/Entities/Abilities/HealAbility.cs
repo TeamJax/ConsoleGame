@@ -4,14 +4,14 @@
 
     public class HealAbility : Ability
     {
-        public HealAbility(string name, int resourceCost, double damageAmount, double healAmount, string description = null)
-            : base(name, resourceCost, damageAmount, healAmount, description)
+        public HealAbility(string name, int resourceCost, int power, string description = null)
+            : base(name, resourceCost, power, description)
         {
         }
 
-        public override void UseAbility()
+        public override void UseAbility(Hero targetHero)
         {
-            throw new NotImplementedException();
+            targetHero.Health += this.AbilityPower;
         }
     }
 }

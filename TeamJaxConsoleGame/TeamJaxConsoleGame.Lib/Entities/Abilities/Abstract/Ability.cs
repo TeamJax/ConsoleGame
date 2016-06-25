@@ -7,16 +7,14 @@
     {
         private AbilityType type;
         private int resourceCost;
-        private double damageAmount;
-        private double healAmount;
+        private int abilityPower;
         private string description;
 
-        public Ability(string name, int resourceCost, double damageAmount, double healAmount, string description = null)           
+        public Ability(string name, int resourceCost, int abilityPower, string description = null)           
         {
             this.Name = name;
             this.ResourceCost = resourceCost;
-            this.DamageAmount = damageAmount;
-            this.HealAmount = healAmount;
+            this.AbilityPower = abilityPower;
             this.Description = description;
         }
 
@@ -51,7 +49,26 @@
             }
         }
 
-        public string Description {
+        public int AbilityPower
+        {
+            get
+            {
+                return this.abilityPower;
+            }
+
+            set
+            {
+                if(value < 0)
+                {
+                    throw new ArgumentException("Ability power cannot be negative!");
+                }
+
+                this.abilityPower = value;
+            }
+        }
+
+        public string Description
+        {
             get
             {
                 return this.description;
@@ -68,42 +85,6 @@
             }
         }
 
-        public double DamageAmount
-        {
-            get
-            {
-                return this.damageAmount;
-            }
-
-            set
-            {
-                if(value < 0)
-                {
-                    throw new ArgumentException("Ability damage cannot be negative!");
-                }
-
-                this.damageAmount = value;
-            }
-        }
-
-        public double HealAmount
-        {
-            get
-            {
-                return this.healAmount;
-            }
-
-            set
-            {
-                if(value < 0)
-                {
-                    throw new ArgumentException("Ability Heal ammount cannot be negative!");
-                }
-
-                this.healAmount = value;
-            }
-        }
-
-        public abstract void UseAbility();     
+        public abstract void UseAbility(Hero targetHero);     
     }
 }
