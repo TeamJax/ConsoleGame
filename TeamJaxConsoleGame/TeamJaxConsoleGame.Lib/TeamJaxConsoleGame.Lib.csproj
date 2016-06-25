@@ -52,12 +52,11 @@
     <Compile Include="Entities\Skills\Abstract\Skill.cs" />
     <Compile Include="Enumerations\AbilityType.cs" />
     <Compile Include="Enumerations\ItemType.cs" />
-    <Compile Include="Interfaces\Abilities\IDamagable.cs" />
-    <Compile Include="Interfaces\Abilities\IHealable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ExtensionMethods\" />
+    <Folder Include="Interfaces\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
