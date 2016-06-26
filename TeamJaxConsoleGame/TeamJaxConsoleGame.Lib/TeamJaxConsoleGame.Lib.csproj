@@ -55,7 +55,9 @@
     <Compile Include="Enumerations\AbilityType.cs" />
     <Compile Include="Enumerations\ItemType.cs" />
     <Compile Include="Enumerations\SkillType.cs" />
+    <Compile Include="GameEnginge.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScreenText\GameScreen.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ExtensionMethods\" />
