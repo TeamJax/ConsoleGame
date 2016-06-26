@@ -2,8 +2,9 @@
 {
     using System;
     using Enumerations;
+    using Interfaces;
 
-    public abstract class Skill : GameObject
+    public abstract class Skill : GameObject, ISkill
     {
         private SkillType type;
         private int successChance;

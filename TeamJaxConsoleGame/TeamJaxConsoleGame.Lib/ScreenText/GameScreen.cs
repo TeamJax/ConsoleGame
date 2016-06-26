@@ -21,14 +21,6 @@
             Console.BufferWidth = 120;
         }
 
-        //public static void SetLevelScreen()
-        //{
-        //    Console.WindowHeight = 44;
-        //    Console.BufferHeight = 44;
-        //    Console.WindowWidth = 66;
-        //    Console.BufferWidth = 66;
-        //}
-
         private static void PrintLogo()
         {
             Console.ForegroundColor = ConsoleColor.Red;

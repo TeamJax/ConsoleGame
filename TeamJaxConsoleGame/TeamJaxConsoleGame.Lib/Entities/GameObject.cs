@@ -2,7 +2,9 @@
 {
     using System;
 
-    public abstract class GameObject
+    using Interfaces;
+
+    public abstract class GameObject : IGameObject
     {
         public string Name { get; set; }
 

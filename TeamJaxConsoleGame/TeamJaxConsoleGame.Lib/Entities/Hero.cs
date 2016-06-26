@@ -2,10 +2,12 @@
 {
     using System;
     using System.Collections.Generic;
+    
     using Abilities;
+    using Interfaces;
     using Skills;
 
-    public class Hero : Person
+    public class Hero : ItemHolder, IFighter
     {       
         public Hero(string name)
         {
@@ -14,8 +16,17 @@
 
         public int Health { get; set; }
 
-        public IList<Skill> Skills { get; set; }
+        public int AttackDamage { get; set; }
+
+        public int ArmorRating { get; set; }  
+
+        public IList<ISkill> Skills { get; set; }
 
         public IList<Ability> Abilities { get; set; }
+
+        public override string Describe()
+        {
+            return string.Format("You are {0}. Another great hero seeking fortune and fame in the land of Teleriknia.", this.Name);
+        }
     }
 }
