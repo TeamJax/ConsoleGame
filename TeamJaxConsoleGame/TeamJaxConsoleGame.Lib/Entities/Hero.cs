@@ -2,17 +2,39 @@
 {
     using System;
     using System.Collections.Generic;
-    
+
     using Abilities;
     using Interfaces;
     using Skills;
+    using Enumerations;
 
     public class Hero : ItemHolder, IFighter
-    {       
-        public Hero(string name)
+    {
+        private RaceType race;
+        private HeroType heroClass;
+        private int stamina;
+        private int agility;
+        private int intelligence;
+        private int strenght;
+              
+        public Hero(string name, RaceType race, HeroType heroClass)
         {
             this.Name = name;
+            this.Race = race;
+            this.HeroClass = heroClass;
         }
+
+        public RaceType Race { get; set; }
+
+        public HeroType HeroClass { get; set; }
+
+        public int Stamina { get; set; }
+
+        public int Agility { get; set; }
+
+        public int Intelligence { get; set; }
+
+        public int Strenght { get; set; }
 
         public int Health { get; set; }
 
