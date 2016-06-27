@@ -57,6 +57,7 @@
     <Compile Include="Enumerations\AbilityType.cs" />
     <Compile Include="Enumerations\HeroType.cs" />
     <Compile Include="Enumerations\ItemType.cs" />
+    <Compile Include="Enumerations\RaceType.cs" />
     <Compile Include="Enumerations\SkillType.cs" />
     <Compile Include="Factory\ForestFactory.cs" />
     <Compile Include="Factory\GameFactory.cs" />
