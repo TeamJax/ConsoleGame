@@ -55,6 +55,7 @@
     <Compile Include="Entities\Skills\ActiveSkill.cs" />
     <Compile Include="Entities\Skills\PassiveSkill.cs" />
     <Compile Include="Enumerations\AbilityType.cs" />
+    <Compile Include="Enumerations\HeroType.cs" />
     <Compile Include="Enumerations\ItemType.cs" />
     <Compile Include="Enumerations\SkillType.cs" />
     <Compile Include="Factory\ForestFactory.cs" />
