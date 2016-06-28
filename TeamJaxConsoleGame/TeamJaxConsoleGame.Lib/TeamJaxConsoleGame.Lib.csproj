@@ -49,6 +49,15 @@
     <Compile Include="Entities\Enemy.cs" />
     <Compile Include="Entities\GameObject.cs" />
     <Compile Include="Entities\Hero.cs" />
+    <Compile Include="Entities\HeroClasses\DeathKnight.cs" />
+    <Compile Include="Entities\HeroClasses\Hunter.cs" />
+    <Compile Include="Entities\HeroClasses\Mage.cs" />
+    <Compile Include="Entities\HeroClasses\Monk.cs" />
+    <Compile Include="Entities\HeroClasses\Paladin.cs" />
+    <Compile Include="Entities\HeroClasses\Priest.cs" />
+    <Compile Include="Entities\HeroClasses\Rogue.cs" />
+    <Compile Include="Entities\HeroClasses\Warlock.cs" />
+    <Compile Include="Entities\HeroClasses\Warrior.cs" />
     <Compile Include="Entities\Item.cs" />
     <Compile Include="Entities\Location.cs" />
     <Compile Include="Entities\ItemHolder.cs" />
@@ -56,8 +65,13 @@
     <Compile Include="Entities\Skills\ActiveSkill.cs" />
     <Compile Include="Entities\Skills\PassiveSkill.cs" />
     <Compile Include="Enumerations\AbilityType.cs" />
+<<<<<<< HEAD
     <Compile Include="Enumerations\GameSceneType.cs" />
+=======
+    <Compile Include="Enumerations\HeroType.cs" />
+>>>>>>> origin/master
     <Compile Include="Enumerations\ItemType.cs" />
+    <Compile Include="Enumerations\RaceType.cs" />
     <Compile Include="Enumerations\SkillType.cs" />
     <Compile Include="Factory\ForestFactory.cs" />
     <Compile Include="Factory\GameFactory.cs" />

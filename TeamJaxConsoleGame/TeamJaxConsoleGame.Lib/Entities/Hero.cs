@@ -6,19 +6,47 @@
     using Abilities;
     using Interfaces;
     using Skills;
+<<<<<<< HEAD
     using Constants;
+=======
+    using Enumerations;
+>>>>>>> origin/master
 
     public class Hero : ItemHolder, IFighter
-    {       
-        public Hero(string name)
+    {
+        private RaceType race;
+        private HeroType heroClass;
+        private int stamina;
+        private int agility;
+        private int intelligence;
+        private int strenght;
+              
+        public Hero(string name, RaceType race, HeroType heroClass)
         {
             this.Name = name;
+<<<<<<< HEAD
             this.Health = HeroConstants.STARTING_HEALTH;
             this.AttackDamage = HeroConstants.ATTACK_DAMAGE;
             this.ArmorRating = HeroConstants.ARMOR_RATING;
             this.Skills = new List<ISkill>();
             this.Abilities = new List<Ability>();
+=======
+            this.Race = race;
+            this.HeroClass = heroClass;
+>>>>>>> origin/master
         }
+
+        public RaceType Race { get; set; }
+
+        public HeroType HeroClass { get; set; }
+
+        public int Stamina { get; set; }
+
+        public int Agility { get; set; }
+
+        public int Intelligence { get; set; }
+
+        public int Strenght { get; set; }
 
         public int Health { get; set; }
 
