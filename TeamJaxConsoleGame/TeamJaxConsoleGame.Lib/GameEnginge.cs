@@ -1,6 +1,7 @@
 ﻿namespace TeamJaxConsoleGame.Lib
 {
     using Entities;
+    using Enumerations;
     using Factory;
     using ScreenText;
     using System;
@@ -12,13 +13,14 @@
     public abstract class GameEnginge
     {
         protected static GameScene currentScene;
+        private static Hero playerHero;
 
-		protected static void Start()
-		{
-			GameScreen.BattleCity();
-			Console.Clear();
-			Play();
-		}
+        protected static void Start()
+        {
+            GameScreen.LoadLogoIntro();
+            Console.Clear();
+            Play();
+        }
 
         protected static void CreateScene()
         {
@@ -29,47 +31,67 @@
 
             startLocation.LocationObjects.Add(startLocation.LocationFacotry.CreateEnemyEntity());
 
-            var sceneHero = new Hero("Current hero name");
-            currentScene = new GameScene(startLocation, sceneHero);
+            currentScene = new GameScene(startLocation, playerHero, GameSceneType.Town);
+        }
+
+        protected static void CreateHero()
+        {
+            GameScreen.LoadHearoCreation();
+            var userHeroNameInput = Console.ReadLine();
+            playerHero = new Hero(userHeroNameInput);
         }
 
         private static void Play()
-		{
-            CreateScene();
-            Console.WriteLine(currentScene.CurrentLocation.Describe());
-            Console.WriteLine(currentScene.Hero.Describe());
-			//while (true)
-			//{
-			////	if (Console.KeyAvailable)
-			////	{
-			////		ConsoleKeyInfo keyPressed = Console.ReadKey(true);
-			////		while (Console.KeyAvailable) { Console.ReadKey(true); }
-			////		switch (keyPressed.Key)
-			////		{
-			////			case ConsoleKey.DownArrow:
+        {
+            CreateHero();
+            while (true)
+            {
+                Console.Clear();
+                CreateScene();
+                Console.WriteLine(currentScene.CurrentLocation.Describe());
+                Console.WriteLine(currentScene.Hero.Describe());
 
-			////			case ConsoleKey.LeftArrow:
+                ConsoleKeyInfo keyPressed;
+                bool showInvalidInput = false;
+                do
+                {
+                    if (showInvalidInput)
+                    {
+                        Console.WriteLine("Invalid input!");
+                    }
+                    keyPressed = Console.ReadKey();
 
-			////			case ConsoleKey.RightArrow:
+                   showInvalidInput = true;
 
-			////			case ConsoleKey.UpArrow:
-			////				if (level != null)
-			////					level.Player1.Move(keyPressed.Key);
-			////				break;
 
-			////			case ConsoleKey.Spacebar:
-			////				if (level != null)
-			////				{
-			////					level.Player1.Fire();
-			////					Sounds.FireWeapon();
-			////				}
-			////				break;
+                } while (!currentScene.ValidateUserInput(keyPressed));
 
-			////			default:
-			////				break;
-			////		}
-			////	}
-			//}
-		}
+                //if (keyPressed.Key == ConsoleKey.D9)
+                //{
+                //    break;
+                //}
+                //if (Console.KeyAvailable)
+                //{
+                //    ConsoleKeyInfo keyPressed = Console.ReadKey(true);
+                //    while (Console.KeyAvailable) { Console.ReadKey(true); }
+
+                //    System.Threading.Thread.p
+                //    switch (keyPressed.Key)
+                //    {
+                //        //invnetory
+                //        case ConsoleKey.D1:
+                //            break;
+
+                //        //exit
+                //        case ConsoleKey.D9:
+                //            return;
+                //        default:
+                //            break;
+                //    }
+                //}
+            }
+        }
+
+        //private static bool CheckUserInput()
     }
 }

@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants\HeroConstants.cs" />
     <Compile Include="Entities\Abilities\Abstract\Ability.cs" />
     <Compile Include="Entities\Abilities\DamageAbility.cs" />
     <Compile Include="Entities\Abilities\HealAbility.cs" />
@@ -55,6 +56,7 @@
     <Compile Include="Entities\Skills\ActiveSkill.cs" />
     <Compile Include="Entities\Skills\PassiveSkill.cs" />
     <Compile Include="Enumerations\AbilityType.cs" />
+    <Compile Include="Enumerations\GameSceneType.cs" />
     <Compile Include="Enumerations\ItemType.cs" />
     <Compile Include="Enumerations\SkillType.cs" />
     <Compile Include="Factory\ForestFactory.cs" />
@@ -67,10 +69,21 @@
     <Compile Include="Interfaces\IMerchant.cs" />
     <Compile Include="Interfaces\ISkill.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\GameScreenResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GameScreenResources.resx</DependentUpon>
+    </Compile>
     <Compile Include="ScreenText\GameScreen.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ExtensionMethods\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\GameScreenResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GameScreenResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
