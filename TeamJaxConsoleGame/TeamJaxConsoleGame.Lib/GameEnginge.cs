@@ -38,7 +38,7 @@
         {
             GameScreen.LoadHearoCreation();
             var userHeroNameInput = Console.ReadLine();
-            playerHero = new Hero(userHeroNameInput);
+            playerHero = new Hero(userHeroNameInput, RaceType.Human, HeroType.DeathKnight);
         }
 
         private static void Play()

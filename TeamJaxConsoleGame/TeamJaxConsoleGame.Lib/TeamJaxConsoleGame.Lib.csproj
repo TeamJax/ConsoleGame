@@ -65,11 +65,8 @@
     <Compile Include="Entities\Skills\ActiveSkill.cs" />
     <Compile Include="Entities\Skills\PassiveSkill.cs" />
     <Compile Include="Enumerations\AbilityType.cs" />
-<<<<<<< HEAD
     <Compile Include="Enumerations\GameSceneType.cs" />
-=======
     <Compile Include="Enumerations\HeroType.cs" />
->>>>>>> origin/master
     <Compile Include="Enumerations\ItemType.cs" />
     <Compile Include="Enumerations\RaceType.cs" />
     <Compile Include="Enumerations\SkillType.cs" />

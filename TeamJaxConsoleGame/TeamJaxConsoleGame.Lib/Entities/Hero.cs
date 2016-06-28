@@ -6,11 +6,8 @@
     using Abilities;
     using Interfaces;
     using Skills;
-<<<<<<< HEAD
     using Constants;
-=======
     using Enumerations;
->>>>>>> origin/master
 
     public class Hero : ItemHolder, IFighter
     {
@@ -24,16 +21,13 @@
         public Hero(string name, RaceType race, HeroType heroClass)
         {
             this.Name = name;
-<<<<<<< HEAD
             this.Health = HeroConstants.STARTING_HEALTH;
             this.AttackDamage = HeroConstants.ATTACK_DAMAGE;
             this.ArmorRating = HeroConstants.ARMOR_RATING;
             this.Skills = new List<ISkill>();
             this.Abilities = new List<Ability>();
-=======
             this.Race = race;
             this.HeroClass = heroClass;
->>>>>>> origin/master
         }
 
         public RaceType Race { get; set; }
