@@ -10,11 +10,10 @@ namespace TeamJaxConsoleGame.Lib.Entities.Items
 {
     class Sword : Item
     {
-        public const int swordPrice = 20;
         public const int swordDamage = 40;
 
-        public Sword(string name)
-            : base(name, Sword.swordPrice, ItemType.Sword)
+        public Sword(string name, int price)
+            : base(name, price, ItemType.Sword)
         {
         }
 

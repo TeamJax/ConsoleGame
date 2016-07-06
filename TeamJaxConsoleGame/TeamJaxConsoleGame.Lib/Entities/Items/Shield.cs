@@ -11,12 +11,11 @@ namespace TeamJaxConsoleGame.Lib.Entities.Items
 {
     class Shield : Item
     {
-        public const int shieldPrice = 10;
         public const int shieldDamage = 5;
         public const int shieldProtection = 30;
 
-        public Shield(string name)
-            : base(name, Shield.shieldPrice, ItemType.Shield)
+        public Shield(string name, int price)
+            : base(name, price, ItemType.Shield)
         {
         }
 

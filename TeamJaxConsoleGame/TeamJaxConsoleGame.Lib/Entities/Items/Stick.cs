@@ -12,10 +12,9 @@ namespace TeamJaxConsoleGame.Lib.Entities.Items
     class Stick : Item
     {
         public const int stickDamage = 5;
-        public const int stickPrice = 0;
 
-        public Stick(string name)
-            : base(name, Stick.stickPrice, ItemType.Stick)
+        public Stick(string name, int price)
+            : base(name, price, ItemType.Stick)
         {
         }
 
