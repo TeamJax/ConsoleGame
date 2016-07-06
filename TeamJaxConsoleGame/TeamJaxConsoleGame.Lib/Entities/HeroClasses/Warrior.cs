@@ -12,6 +12,13 @@
         public Warrior(string name, RaceType race) 
             : base(name, race)
         {
+            this.Stamina = 200;
+            this.Strenght = 120;
+            this.Intelligence = 15;
+            this.Health = this.Strenght + this.Stamina;
+            this.Agility = 30;
+            this.ArmorRating = 50;
+            this.AttackDamage = this.Agility * 2 + this.Strenght;
         }
     }
 }
