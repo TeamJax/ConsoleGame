@@ -2,7 +2,10 @@
 {
     public enum ItemType
     {
-        Consumable,
-        Equipable
+        Sword,
+        Stick,
+        Shield,
+        Knife,
+        Pot
     }
 }
