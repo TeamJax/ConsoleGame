@@ -12,13 +12,12 @@
     public class Hero : ItemHolder, IFighter
     {
         private RaceType race;
-        private HeroType heroClass;
         private int stamina;
         private int agility;
         private int intelligence;
         private int strenght;
               
-        public Hero(string name, RaceType race, HeroType heroClass)
+        public Hero(string name, RaceType race)
         {
             this.Name = name;
             this.Health = HeroConstants.STARTING_HEALTH;
@@ -27,12 +26,9 @@
             this.Skills = new List<IActivatable>();
             this.Abilities = new List<Ability>();
             this.Race = race;
-            this.HeroClass = heroClass;
         }
 
         public RaceType Race { get; set; }
-
-        public HeroType HeroClass { get; set; }
 
         public int Stamina { get; set; }
 
