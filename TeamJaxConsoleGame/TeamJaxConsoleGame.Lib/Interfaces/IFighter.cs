@@ -6,6 +6,14 @@
 
         int AttackDamage { get; set; }
 
-        int ArmorRating { get; set; }  
+        int ArmorRating { get; set; }
+
+        int Stamina { get; set; }
+
+        int Agility { get; set; }
+
+        int Intelligence { get; set; }
+
+        int Strenght { get; set; }
     }
 }

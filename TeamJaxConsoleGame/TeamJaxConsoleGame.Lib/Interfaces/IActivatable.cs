@@ -4,8 +4,6 @@
 
     public interface IActivatable
     {
-        void Activate(IFighter target);
-
-     
+        void Activate(IFighter target);     
     }
 }

@@ -70,10 +70,10 @@
     <Compile Include="Entities\Skills\ActiveSkill.cs" />
     <Compile Include="Entities\Skills\PassiveSkill.cs" />
     <Compile Include="Enumerations\AbilityType.cs" />
+    <Compile Include="Enumerations\ActiveSkillTypes.cs" />
     <Compile Include="Enumerations\GameSceneType.cs" />
     <Compile Include="Enumerations\ItemType.cs" />
     <Compile Include="Enumerations\RaceType.cs" />
-    <Compile Include="Enumerations\SkillType.cs" />
     <Compile Include="Factory\ForestFactory.cs" />
     <Compile Include="Factory\GameFactory.cs" />
     <Compile Include="Factory\GameScreenFactory\GameScreenFacotry.cs" />

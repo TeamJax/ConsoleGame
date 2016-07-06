@@ -3,14 +3,17 @@
     using System;
 
     public abstract class Skill : GameObject
-    {
+    {   
         private int successChance;
 
-        public Skill(string name, int successChance)
+        public Skill(string name, int power, int successChance)
             : base(name)
         {
+            this.Power = power;
             this.SuccessChance = successChance;
-        } 
+        }
+
+        public int Power { get; private set; }
 
         public int SuccessChance
         {
