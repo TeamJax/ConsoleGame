@@ -72,6 +72,7 @@
     <Compile Include="Enumerations\SkillType.cs" />
     <Compile Include="Factory\ForestFactory.cs" />
     <Compile Include="Factory\GameFactory.cs" />
+    <Compile Include="Factory\GameScreenFactory\GameScreenFacotry.cs" />
     <Compile Include="Factory\TownFactory.cs" />
     <Compile Include="GameEnginge.cs" />
     <Compile Include="GameScene.cs" />
@@ -85,6 +86,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GameScreenResources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\TownOptionsMenu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TownOptionsMenu.resx</DependentUpon>
+    </Compile>
     <Compile Include="ScreenText\GameScreen.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -94,6 +100,10 @@
     <EmbeddedResource Include="Resources\GameScreenResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>GameScreenResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\TownOptionsMenu.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TownOptionsMenu.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
