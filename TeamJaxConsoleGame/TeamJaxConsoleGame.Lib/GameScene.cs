@@ -11,11 +11,14 @@
 
     public class GameScene
     {
+        private IDictionary<string, GameSceneType> optionsMenuItems;
+
         //TODO: Use interfaces
-        public GameScene(Location currentLocation, Hero hero, GameSceneType sceneType)
+        public GameScene(Location currentLocation, Hero hero, GameSceneType sceneType, IDictionary<string, GameSceneType> optionsMenuItems)
         {
             this.CurrentLocation = currentLocation;
             this.Hero = hero;
+            this.OptionsMenuItems = optionsMenuItems;
         }
 
         public Location CurrentLocation { get; set; }
@@ -23,6 +26,41 @@
         public Hero Hero { get; set; }
 
         public GameSceneType SceneType { get; set; }
+
+        public IDictionary<string, GameSceneType> OptionsMenuItems
+        {
+            get
+            {
+                //Lazy loading
+                if (this.optionsMenuItems == null)
+                {
+                    this.optionsMenuItems = new Dictionary<string, GameSceneType>();
+                }
+
+                return this.optionsMenuItems;
+            }
+            set
+            {
+                if (value == null)
+                {
+                    throw new ArgumentException("OptionsMenuItems can not be null");
+                }
+
+                this.optionsMenuItems = value;
+            }
+        }
+        
+        internal void WriteOptionsMenu()
+        {
+            this.OptionsMenuItems.Keys.OrderBy(x => x);
+            var index = 1;
+            foreach (var key in this.OptionsMenuItems.Keys)
+            {
+                Console.Write("{0}.{1}; ", index, key);
+                index++;
+            }
+            Console.WriteLine();
+        }
 
         /// <summary>
         /// Town: 1.Inventory 2.Travel 3.Forest 4.Shop 
