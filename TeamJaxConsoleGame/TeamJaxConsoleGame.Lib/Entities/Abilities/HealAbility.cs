@@ -1,17 +1,19 @@
 ﻿namespace TeamJaxConsoleGame.Lib.Entities.Abilities
 {
     using Enumerations;
+    using Interfaces;
 
-    public class HealAbility : Ability
+    public class HealAbility : Ability, IGameObject
     {
         public HealAbility(string name, AbilityType type, int resourceCost, int abilityPower, string description = null) 
             : base(name, type, resourceCost, abilityPower, description)
         {
         }
 
-        public override void UseAbility(Hero targetHero)
+        public override void Activate(IFighter target)
         {
-            targetHero.Health += this.AbilityPower;
+            //todo check if invaldi hero selected
+            target.Health += this.AbilityPower;
         }
     }
 }

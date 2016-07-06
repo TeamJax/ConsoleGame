@@ -3,7 +3,7 @@
     using Interfaces;
     using Enumerations;
 
-    public class ActiveSkill : Skill, IActivatable, IGameObject
+    public class ActiveSkill : Skill, IAbility, IGameObject
     {
         public ActiveSkillTypes Type { get; set; }
 

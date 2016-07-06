@@ -1,20 +1,18 @@
 ﻿namespace TeamJaxConsoleGame.Lib.Entities.Abilities
 {
-    using System;
     using Enumerations;
+    using Interfaces;
 
-    public class DamageAbility : Ability
+    public class DamageAbility : Ability, IGameObject
     {
         public DamageAbility(string name, AbilityType type, int resourceCost, int abilityPower, string description = null) 
             : base(name, type, resourceCost, abilityPower, description)
         {
         }
 
-        public override void UseAbility(Hero targetHero)
+        public override void Activate(IFighter target)
         {
-            var inflictedDamage = 0; //add formula   
-            
-            targetHero.Health -= inflictedDamage;
-        }
+            target.Health -= this.AbilityPower;
+        }     
     }
 }
