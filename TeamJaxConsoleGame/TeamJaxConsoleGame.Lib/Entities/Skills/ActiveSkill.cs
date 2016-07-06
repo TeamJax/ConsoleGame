@@ -1,12 +1,17 @@
-﻿using TeamJaxConsoleGame.Lib.Enumerations;
-
-namespace TeamJaxConsoleGame.Lib.Entities.Skills
+﻿namespace TeamJaxConsoleGame.Lib.Entities.Skills
 {
-    public class ActiveSkill : Skill
+    using Interfaces;
+
+    public class ActiveSkill : Skill, IActivatable, IGameObject
     {
-        public ActiveSkill(string name, SkillType type, int successChance) 
-            : base(name, type, successChance)
+        public ActiveSkill(string name, int successChance) 
+            : base(name, successChance)
         {
+        }
+
+        public void Activate(IFighter target)
+        {
+            
         }
     }
 }

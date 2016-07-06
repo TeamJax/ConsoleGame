@@ -1,6 +1,5 @@
 ﻿namespace TeamJaxConsoleGame.Lib.Entities.Abilities
 {
-    using System;
     using Enumerations;
 
     public class HealAbility : Ability

@@ -2,8 +2,9 @@
 {
     using System;
     using Enumerations;
+    using Interfaces;
 
-    public abstract class Ability : GameObject
+    public abstract class Ability : GameObject, IActivatable
     {
         private AbilityType type;
         private int resourceCost;
@@ -86,6 +87,9 @@
             }
         }
 
-        public abstract void UseAbility(Hero targetHero);     
+        public void Activate(IFighter target)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

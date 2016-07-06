@@ -2,6 +2,7 @@
 {
     using System;
     using Enumerations;
+    using Interfaces;
 
     public class MixedAbility : Ability
     {
@@ -10,9 +11,10 @@
         {
         }
 
-        public override void UseAbility(Hero targetHero)
+        public override void UseAbility()
         {
-            //todo damage target, heal self
+            targetHero.Health += this.AbilityPower;
+
         }
     }
 }

@@ -4,6 +4,8 @@
 
     public interface IActivatable
     {
-        void ActivateSkill();        
+        void Activate(IFighter target);
+
+     
     }
 }
