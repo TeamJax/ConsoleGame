@@ -12,6 +12,13 @@
         public Priest(string name, RaceType race)
             : base(name, race)
         {
+            this.Stamina = 60;
+            this.Strenght = 40;
+            this.Intelligence = 100;
+            this.Health = this.Strenght + this.Stamina;
+            this.Agility = 50;
+            this.ArmorRating = 20;
+            this.AttackDamage = this.Agility * 2 + this.Intelligence;
         }
     }
 }

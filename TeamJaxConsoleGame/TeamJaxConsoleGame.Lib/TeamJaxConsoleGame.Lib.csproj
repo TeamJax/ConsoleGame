@@ -41,12 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants\HeroConstants.cs" />
-    <Compile Include="Constants\ItemConstants.cs" />
     <Compile Include="Entities\Abilities\Abstract\Ability.cs" />
     <Compile Include="Entities\Abilities\DamageAbility.cs" />
     <Compile Include="Entities\Abilities\HealAbility.cs" />
-    <Compile Include="Entities\Abilities\MixedAbility.cs" />
-    <Compile Include="Entities\Attacks\Abstract\Attack.cs" />
     <Compile Include="Entities\Enemy.cs" />
     <Compile Include="Entities\GameObject.cs" />
     <Compile Include="Entities\Hero.cs" />
@@ -71,16 +68,17 @@
     <Compile Include="Entities\Skills\ActiveSkill.cs" />
     <Compile Include="Entities\Skills\PassiveSkill.cs" />
     <Compile Include="Enumerations\AbilityType.cs" />
+    <Compile Include="Enumerations\ActiveSkillTypes.cs" />
     <Compile Include="Enumerations\GameSceneType.cs" />
     <Compile Include="Enumerations\ItemType.cs" />
     <Compile Include="Enumerations\RaceType.cs" />
-    <Compile Include="Enumerations\SkillType.cs" />
     <Compile Include="Factory\ForestFactory.cs" />
     <Compile Include="Factory\GameFactory.cs" />
     <Compile Include="Factory\GameScreenFactory\GameScreenFacotry.cs" />
     <Compile Include="Factory\TownFactory.cs" />
     <Compile Include="GameEnginge.cs" />
     <Compile Include="GameScene.cs" />
+    <Compile Include="Interfaces\IAbility.cs" />
     <Compile Include="Interfaces\IFighter.cs" />
     <Compile Include="Interfaces\IGameObject.cs" />
     <Compile Include="Interfaces\IMerchant.cs" />

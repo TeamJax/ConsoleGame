@@ -1,12 +1,34 @@
-﻿using TeamJaxConsoleGame.Lib.Enumerations;
-
-namespace TeamJaxConsoleGame.Lib.Entities.Skills
+﻿namespace TeamJaxConsoleGame.Lib.Entities.Skills
 {
-    public class ActiveSkill : Skill
+    using Interfaces;
+    using Enumerations;
+
+    public class ActiveSkill : Skill, IAbility, IGameObject
     {
-        public ActiveSkill(string name, SkillType type, int successChance) 
-            : base(name, type, successChance)
+        public ActiveSkillTypes Type { get; set; }
+
+        public ActiveSkill(string name, int power, int successChance, ActiveSkillTypes type) 
+            : base(name, power, successChance)
         {
+            this.Type = type;
+        }
+
+        public void Activate(IFighter target)
+        {
+            switch (this.Type)
+            {
+                case ActiveSkillTypes.Haste:
+                    target.Agility += this.Power;
+                    break;
+                case ActiveSkillTypes.Aggression:
+                    target.Strenght += this.Power;
+                    break;
+                case ActiveSkillTypes.Adrenaline:
+                    target.AttackDamage += this.Power;
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

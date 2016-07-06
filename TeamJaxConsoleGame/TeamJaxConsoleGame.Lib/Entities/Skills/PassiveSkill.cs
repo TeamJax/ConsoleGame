@@ -1,11 +1,11 @@
-﻿using TeamJaxConsoleGame.Lib.Enumerations;
-
-namespace TeamJaxConsoleGame.Lib.Entities.Skills
+﻿namespace TeamJaxConsoleGame.Lib.Entities.Skills
 {
-    public class PassiveSkill : Skill
+    using Interfaces;
+
+    public class PassiveSkill : Skill, IGameObject
     {
-        public PassiveSkill(string name, SkillType type, int successChance)
-            : base(name, type, successChance)
+        public PassiveSkill(string name, int power, int successChance)
+            : base(name, power, successChance)
         {
 
         }

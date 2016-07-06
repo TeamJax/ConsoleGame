@@ -2,17 +2,18 @@
 {
     using System;
     using Enumerations;
+    using Interfaces;
 
-    public abstract class Ability : GameObject
+    public abstract class Ability : GameObject, IAbility
     {
         private AbilityType type;
         private int resourceCost;
         private int abilityPower;
         private string description;
 
-        public Ability(string name, AbilityType type, int resourceCost, int abilityPower, string description = null)           
+        public Ability(string name, AbilityType type, int resourceCost, int abilityPower, string description = null)   
+            : base(name)        
         {
-            this.Name = name;
             this.Type = type;
             this.ResourceCost = resourceCost;
             this.AbilityPower = abilityPower;
@@ -86,6 +87,6 @@
             }
         }
 
-        public abstract void UseAbility(Hero targetHero);     
+        public abstract void Activate(IFighter target);       
     }
 }

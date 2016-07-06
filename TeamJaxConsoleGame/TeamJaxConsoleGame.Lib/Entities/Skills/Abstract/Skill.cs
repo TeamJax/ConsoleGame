@@ -1,32 +1,19 @@
 ﻿namespace TeamJaxConsoleGame.Lib.Entities.Skills
 {
     using System;
-    using Enumerations;
 
     public abstract class Skill : GameObject
-    {
-        private SkillType type;
+    {   
         private int successChance;
 
-        public Skill(string name, SkillType type, int successChance)
+        public Skill(string name, int power, int successChance)
+            : base(name)
         {
-            this.Name = name;
-            this.type = type;
+            this.Power = power;
             this.SuccessChance = successChance;
         }
 
-        public SkillType Type
-        {
-            get
-            {
-                return this.type;
-            }
-
-            set
-            {
-                this.type = value;
-            }
-        }
+        public int Power { get; private set; }
 
         public int SuccessChance
         {

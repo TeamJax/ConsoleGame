@@ -23,7 +23,7 @@
             this.Health = HeroConstants.STARTING_HEALTH;
             this.AttackDamage = HeroConstants.ATTACK_DAMAGE;
             this.ArmorRating = HeroConstants.ARMOR_RATING;
-            this.Skills = new List<IActivatable>();
+            this.Skills = new List<IAbility>();
             this.Abilities = new List<Ability>();
             this.Race = race;
         }
@@ -44,7 +44,7 @@
 
         public int ArmorRating { get; set; }  
 
-        public IList<IActivatable> Skills { get; set; }
+        public IList<IAbility> Skills { get; set; }
 
         public IList<Ability> Abilities { get; set; }
 
