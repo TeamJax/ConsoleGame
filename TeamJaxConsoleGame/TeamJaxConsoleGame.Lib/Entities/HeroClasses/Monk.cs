@@ -12,6 +12,13 @@
         public Monk(string name, RaceType race) 
             : base(name, race)
         {
+            this.Stamina = 180;
+            this.Strenght = 110;
+            this.Intelligence = 25;
+            this.Health = this.Strenght + this.Stamina;
+            this.Agility = 80;
+            this.ArmorRating = 35;
+            this.AttackDamage = this.Agility * 2 + this.Strenght;
         }
     }
 }

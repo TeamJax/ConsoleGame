@@ -12,6 +12,13 @@
         public Paladin(string name, RaceType race) 
             : base(name, race)
         {
+            this.Stamina = 160;
+            this.Strenght = 90;
+            this.Intelligence = 55;
+            this.Health = this.Strenght + this.Stamina;
+            this.Agility = 20;
+            this.ArmorRating = 40;
+            this.AttackDamage = this.Agility * 2 + this.Strenght;
         }
     }
 }
