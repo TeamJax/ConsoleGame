@@ -7,6 +7,7 @@ namespace TeamJaxConsoleGame.Lib.Entities.Skills
         public PassiveSkill(string name, SkillType type, int successChance)
             : base(name, type, successChance)
         {
+
         }
     }
 }

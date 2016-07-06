@@ -78,7 +78,7 @@
     <Compile Include="Interfaces\IFighter.cs" />
     <Compile Include="Interfaces\IGameObject.cs" />
     <Compile Include="Interfaces\IMerchant.cs" />
-    <Compile Include="Interfaces\ISkill.cs" />
+    <Compile Include="Interfaces\IActivatable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\GameScreenResources.Designer.cs">
       <AutoGen>True</AutoGen>
