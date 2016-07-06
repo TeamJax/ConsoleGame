@@ -20,10 +20,10 @@
         public static void SetScreen()
         {
             //TODO: move to GameScreenConstants
-            Console.WindowHeight = 60;
-            Console.BufferHeight = 60;
-            Console.WindowWidth = 120;
-            Console.BufferWidth = 120;
+            //Console.WindowHeight = 60;
+            //Console.BufferHeight = 60;
+            //Console.WindowWidth = 120;
+            //Console.BufferWidth = 120;
         }
 
         public static void LoadHearoCreation()
