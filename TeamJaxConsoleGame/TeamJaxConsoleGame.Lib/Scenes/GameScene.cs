@@ -1,4 +1,4 @@
-﻿namespace TeamJaxConsoleGame.Lib
+﻿namespace TeamJaxConsoleGame.Lib.Scenes
 {
     using System;
     using System.Collections.Generic;
@@ -9,7 +9,7 @@
     using Entities;
     using Enumerations;
 
-    public class GameScene
+    public abstract class GameScene
     {
         private IDictionary<string, GameSceneType> optionsMenuItems;
 

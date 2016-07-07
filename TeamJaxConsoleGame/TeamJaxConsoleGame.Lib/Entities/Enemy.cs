@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TeamJaxConsoleGame.Lib.Interfaces;
-
-namespace TeamJaxConsoleGame.Lib.Entities
+﻿namespace TeamJaxConsoleGame.Lib.Entities
 {
+    using Interfaces;
+
     public class Enemy : ItemHolder, IFighter
     {
         public Enemy(string name, int armorRating, int attackDamage, int health)
@@ -17,10 +12,18 @@ namespace TeamJaxConsoleGame.Lib.Entities
             this.Name = name;
         }
 
+        public int Agility { get; set; }
+
         public int ArmorRating { get; set; }
 
         public int AttackDamage { get; set; }
 
         public int Health { get; set; }
+
+        public int Intelligence { get; set; }
+
+        public int Stamina { get; set; }
+
+        public int Strenght { get; set; }
     }
 }

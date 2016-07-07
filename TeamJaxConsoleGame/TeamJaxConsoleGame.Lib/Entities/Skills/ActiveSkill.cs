@@ -7,7 +7,15 @@
     {
         public ActiveSkillTypes Type { get; set; }
 
-        public ActiveSkill(string name, int power, int successChance, ActiveSkillTypes type) 
+        AbilityType IAbility.Type { get; set; }
+
+        public int ResourceCost { get; set; }
+
+        public int AbilityPower { get; set; }
+
+        public string Description { get; set; }
+
+        public ActiveSkill(string name, int power, int successChance, ActiveSkillTypes type)
             : base(name, power, successChance)
         {
             this.Type = type;

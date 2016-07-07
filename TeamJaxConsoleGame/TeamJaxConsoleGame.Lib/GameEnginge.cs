@@ -3,6 +3,7 @@
     using Entities;
     using Enumerations;
     using Factory;
+    using Scenes;
     using ScreenText;
     using System;
     using System.Collections.Generic;
@@ -39,7 +40,7 @@
                 { "Shop", GameSceneType.Shop  }
             };
 
-            currentScene = new GameScene(startLocation, playerHero, GameSceneType.Town, menuOptions);
+            currentScene = new TownScene(startLocation, playerHero, GameSceneType.Town, menuOptions);
         }
 
         protected static void CreateHero()
