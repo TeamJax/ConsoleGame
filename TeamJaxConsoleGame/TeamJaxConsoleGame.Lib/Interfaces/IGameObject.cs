@@ -4,6 +4,6 @@
     {
         string Name { get; set; }
 
-        string GiveDescriptionDescribe();
+        string GiveDescription();
     }
 }

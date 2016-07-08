@@ -7,10 +7,13 @@
     using Factory;
     using Interfaces;
 
+    /// <summary>
+    /// The different locations in the game where the player can travel around
+    /// </summary>
     public class Location : GameObject
     {
         private GameFactory locationFactory;
-
+        
         public Location(string name, string description, GameFactory locationFactory)
         {
             this.LocationDescription = description;
@@ -19,7 +22,7 @@
             this.LocationObjects = new List<IGameObject>();
         }
 
-        private string LocationDescription { get; set; }
+        public string LocationDescription { get; set; }
         
         public IList<IGameObject> LocationObjects { get; set; }
 
@@ -41,7 +44,7 @@
             }
         }
         
-        public override string GiveDescriptionDescribe()
+        public override string GiveDescription()
         {
             var descriptionToReturn = new StringBuilder();
             descriptionToReturn.AppendLine(string.Format("Current location is {0}. {1}", this.Name, this.LocationDescription));
@@ -50,7 +53,7 @@
 
             foreach (var item in this.LocationObjects)
             {
-                descriptionToReturn.AppendLine(item.GiveDescriptionDescribe());
+                descriptionToReturn.AppendLine(item.GiveDescription());
             }
 
             return descriptionToReturn.ToString();

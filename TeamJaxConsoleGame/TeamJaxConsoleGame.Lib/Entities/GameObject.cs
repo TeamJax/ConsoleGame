@@ -13,7 +13,7 @@
             this.Name = name;
         }
 
-        public virtual string GiveDescriptionDescribe()
+        public virtual string GiveDescription()
         {
             return String.Format("This is {0}", this.Name);
         }

@@ -11,8 +11,8 @@
 
     public abstract class GameEnginge
     {
-        protected static GameScene currentScene;
         private static Hero playerHero;
+        protected static GameScene currentScene;
 
         protected static void Start()
         {
@@ -21,12 +21,13 @@
             Play();
         }
 
-        protected static void InitializeStartingScene(GameSceneFactory sceneFactory,GameFactory locationFactory)
+        protected static void InitializeStartingScene(SceneCreater sceneCreater)
         {
+            GameFactory locationFactory = new TownFactory();
             var startingLocation = new Location(LocationConstants.INIT_LOCATION_NAME, LocationConstants.INIT_LOCATION_DESCRIPTION, locationFactory);
 
             startingLocation.LocationObjects.Add(startingLocation.LocationFacotry.CreateEnemyEntity());
-            currentScene = sceneFactory.CreateScene(playerHero, startingLocation);
+            currentScene = sceneCreater.CreateScene(GameSceneType.Town, playerHero, startingLocation);// sceneFactory.CreateScene(playerHero, startingLocation);
         }
 
         protected static void CreateHero()
@@ -37,9 +38,10 @@
         }
 
         private static void Play()
-        {
+        { 
             CreateHero();
-            InitializeStartingScene(new TownSceneFactory(), new TownFactory());
+            var sceneCreater = new SceneCreater();
+            InitializeStartingScene(sceneCreater); // new TownSceneFactory(), new TownFactory());
 
             while (true)
             {
@@ -62,6 +64,11 @@
 
                 } while (!currentScene.ValidateUserInput(keyPressed));
 
+                GameSceneType selectedScene = currentScene.GetUserSelectedScene(keyPressed);
+                
+                currentScene = sceneCreater.CreateScene(selectedScene, playerHero, currentScene.CurrentLocation);
+
+                //TODO:think how to change the locations?
 
             }
         }

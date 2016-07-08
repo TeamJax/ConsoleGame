@@ -14,33 +14,5 @@
             : base(currentLocation, hero, sceneType, optionsMenuItems)
         {
         }
-
-        /// <summary>
-        /// Town: 1.Inventory 2.Travel 3.Forest 4.Shop 
-        /// </summary>
-        /// <param name="keyPressed">The user choice</param>
-        /// <returns></returns>
-        internal override bool ValidateUserInput(ConsoleKeyInfo keyPressed)
-        {
-            bool returnValue = false;
-
-            //48 = key '0'
-            //49 = key '1'
-            //57 = key '9'
-            for (int i = 1; i <= 4; i++)
-            {
-                if (keyPressed.KeyChar == 48 + i)
-                {
-                    returnValue = true;
-                    break;
-                }
-                else
-                {
-                    returnValue = false;
-                }
-            }
-
-            return returnValue;
-        }
     }
 }
