@@ -11,13 +11,21 @@ namespace TeamJaxConsoleGame.Lib.Factory.GameScreenFactory
 {
     public class TownSceneFactory : GameSceneFactory
     {
-        public override GameScene CreateScene(
-            Location currentLocation,
-            Hero hero,
-            GameSceneType sceneType,
-            IDictionary<string, GameSceneType> optionsMenuItems)
+        public override GameScene CreateScene(Hero hero,string locationName, string locationDescription)
         {
-            return new TownScene(currentLocation, hero, sceneType, optionsMenuItems);
+            var townFactory = new TownFactory();
+            var townLocation = new Location(locationName, locationDescription, townFactory);
+            
+            townLocation.LocationObjects.Add(townLocation.LocationFacotry.CreateEnemyEntity());
+            Dictionary<string, GameSceneType> menuOptions = new Dictionary<string, GameSceneType>()
+            {
+                { "Inventory", GameSceneType.Invenotry  },
+                { "Travel", GameSceneType.Travel  },
+                { "Forest", GameSceneType.Forest  },
+                { "Shop", GameSceneType.Shop  }
+            };
+
+            return new TownScene(townLocation, hero, GameSceneType.Town, menuOptions);
         }
     }
 }

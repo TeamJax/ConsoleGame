@@ -48,7 +48,7 @@
 
         public IList<Ability> Abilities { get; set; }
 
-        public override string Describe()
+        public override string GiveDescriptionDescribe()
         {
             return string.Format("You are {0}. Another great hero seeking fortune and fame in the land of Teleriknia.", this.Name);
         }

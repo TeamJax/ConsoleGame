@@ -2,10 +2,11 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Text;
 
     using Factory;
     using Interfaces;
-    using System.Text;
+
     public class Location : GameObject
     {
         private GameFactory locationFactory;
@@ -40,7 +41,7 @@
             }
         }
         
-        public override string Describe()
+        public override string GiveDescriptionDescribe()
         {
             var descriptionToReturn = new StringBuilder();
             descriptionToReturn.AppendLine(string.Format("Current location is {0}. {1}", this.Name, this.LocationDescription));
@@ -49,7 +50,7 @@
 
             foreach (var item in this.LocationObjects)
             {
-                descriptionToReturn.AppendLine(item.Describe());
+                descriptionToReturn.AppendLine(item.GiveDescriptionDescribe());
             }
 
             return descriptionToReturn.ToString();

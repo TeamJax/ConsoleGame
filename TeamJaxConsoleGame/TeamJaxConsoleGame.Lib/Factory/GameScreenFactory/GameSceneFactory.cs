@@ -11,6 +11,6 @@
 
     public abstract class GameSceneFactory
     {
-        public abstract GameScene CreateScene(Location currentLocation, Hero hero, GameSceneType sceneType, IDictionary<string, GameSceneType> optionsMenuItems);
+        public abstract GameScene CreateScene(Hero hero,string locationName, string locationDescription);
     }
 }

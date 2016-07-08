@@ -33,7 +33,7 @@
             }
         }
 
-        public override string Describe()
+        public override string GiveDescriptionDescribe()
         {
             return string.Format($"Your {this.Name} has a {this.successChance}% chance to be performed.");
         }

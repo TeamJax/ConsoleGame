@@ -17,5 +17,10 @@
         {
             return new Enemy("Town thief", 1, 2, 5);
         }
+
+        public void CreateTrader()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
