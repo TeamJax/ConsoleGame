@@ -1,22 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TeamJaxConsoleGame.Lib.Entities;
-using TeamJaxConsoleGame.Lib.Enumerations;
-using TeamJaxConsoleGame.Lib.Scenes;
-
-namespace TeamJaxConsoleGame.Lib.Factory.GameScreenFactory
+﻿namespace TeamJaxConsoleGame.Lib.Factory.GameScreenFactory
 {
+    using System.Collections.Generic;
+
+    using Entities;
+    using Enumerations;
+    using Scenes;
+
     public class TownSceneFactory : GameSceneFactory
     {
-        public override GameScene CreateScene(Hero hero,string locationName, string locationDescription)
+        public override GameScene CreateScene(Hero hero, Location location)
         {
-            var townFactory = new TownFactory();
-            var townLocation = new Location(locationName, locationDescription, townFactory);
-            
-            townLocation.LocationObjects.Add(townLocation.LocationFacotry.CreateEnemyEntity());
             Dictionary<string, GameSceneType> menuOptions = new Dictionary<string, GameSceneType>()
             {
                 { "Inventory", GameSceneType.Invenotry  },
@@ -25,7 +18,7 @@ namespace TeamJaxConsoleGame.Lib.Factory.GameScreenFactory
                 { "Shop", GameSceneType.Shop  }
             };
 
-            return new TownScene(townLocation, hero, GameSceneType.Town, menuOptions);
+            return new TownScene(location, hero, GameSceneType.Town, menuOptions);
         }
     }
 }

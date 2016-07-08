@@ -29,7 +29,6 @@
             //57 = key '9'
             for (int i = 1; i <= 4; i++)
             {
-                //TODO:
                 if (keyPressed.KeyChar == 48 + i)
                 {
                     returnValue = true;

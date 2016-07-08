@@ -3,6 +3,7 @@
     using Constants;
     using Entities;
     using Enumerations;
+    using Factory;
     using Factory.GameScreenFactory;
     using Scenes;
     using ScreenText;
@@ -20,9 +21,12 @@
             Play();
         }
 
-        protected static void InitializeStartingScene(GameSceneFactory sceneFactory, string locationName, string locationDescription)
+        protected static void InitializeStartingScene(GameSceneFactory sceneFactory,GameFactory locationFactory)
         {
-            currentScene = sceneFactory.CreateScene(playerHero, locationName, locationDescription);
+            var startingLocation = new Location(LocationConstants.INIT_LOCATION_NAME, LocationConstants.INIT_LOCATION_DESCRIPTION, locationFactory);
+
+            startingLocation.LocationObjects.Add(startingLocation.LocationFacotry.CreateEnemyEntity());
+            currentScene = sceneFactory.CreateScene(playerHero, startingLocation);
         }
 
         protected static void CreateHero()
@@ -35,7 +39,7 @@
         private static void Play()
         {
             CreateHero();
-            InitializeStartingScene(new TownSceneFactory(), LocationConstants.INIT_LOCATION_NAME, LocationConstants.INIT_LOCATION_DESCRIPTION);
+            InitializeStartingScene(new TownSceneFactory(), new TownFactory());
 
             while (true)
             {
@@ -57,6 +61,8 @@
 
 
                 } while (!currentScene.ValidateUserInput(keyPressed));
+
+
             }
         }
     }
