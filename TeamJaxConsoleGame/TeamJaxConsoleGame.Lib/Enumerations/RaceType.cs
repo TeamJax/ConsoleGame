@@ -8,7 +8,7 @@ namespace TeamJaxConsoleGame.Lib.Enumerations
 {
     public enum RaceType
     {
-        Tauren, 
+        Tauren = 1, 
         Human, 
         TrollProgrammer,
         UndeadDeveloper,

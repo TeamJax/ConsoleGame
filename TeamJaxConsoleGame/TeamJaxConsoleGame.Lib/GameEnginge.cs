@@ -33,9 +33,34 @@
         protected static void CreateHero()
         {
             string userHeroNameInput;
-            GameScreen.LoadHearoCreation(out userHeroNameInput);
+            HeroType selectedHeroType;
+            RaceType selectedHeroRace;
+            GameScreen.LoadHearoCreation(out userHeroNameInput, out selectedHeroType, out selectedHeroRace);
 
-            playerHero = new Hero(userHeroNameInput, RaceType.Human);
+            switch (selectedHeroType)
+            {
+                case HeroType.DeathKnight:
+                    break;
+                case HeroType.Hunter:
+                    break;
+                case HeroType.Mage:
+                    break;
+                case HeroType.Monk:
+                    break;
+                case HeroType.Paladin:
+                    break;
+                case HeroType.Priest:
+                    break;
+                case HeroType.Rogue:
+                    break;
+                case HeroType.Warlock:
+                    break;
+                case HeroType.Warrior:
+                    break;
+                default:
+                    break;
+            }
+            playerHero = new Hero(userHeroNameInput, RaceType.Human, 10, 10, 10, 10, 10);
         }
 
         private static void Play()

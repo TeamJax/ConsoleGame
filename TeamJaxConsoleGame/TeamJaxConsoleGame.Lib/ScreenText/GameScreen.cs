@@ -22,10 +22,11 @@
             //Console.BufferWidth = 120;
         }
 
-        public static void LoadHearoCreation(out string userHeroNameInput)
+        public static void LoadHearoCreation(out string userHeroNameInput, out HeroType selectedHeroType, out RaceType selectedHeroRace)
         {
             Console.WriteLine(GameScreenResources.LoadHearoCreation);
             userHeroNameInput = Console.ReadLine();
+
             var heroTypeValues = Enum.GetValues(typeof(HeroType));
 
             var index = 1;
@@ -35,10 +36,42 @@
                 index++;
             }
             Console.WriteLine();
-            
+
             //TODO: convert user input into herotype;
             //TODO: validate user input
-            var heroTypeIndex = Console.ReadLine();
+            ConsoleKeyInfo keyPressed;
+
+            do
+            {
+
+             keyPressed = Console.ReadKey();
+
+            } while (!char.IsNumber(keyPressed.KeyChar));
+
+            int userChoice = int.Parse(keyPressed.KeyChar.ToString());
+            selectedHeroType = (HeroType)userChoice;
+
+            heroTypeValues = Enum.GetValues(typeof(RaceType));
+
+            index = 1;
+            foreach (var item in heroTypeValues)
+            {
+                Console.Write("{0}: {1}; ", index, item);
+                index++;
+            }
+            Console.WriteLine();
+            
+            do
+            {
+
+             keyPressed = Console.ReadKey();
+
+            } while (!char.IsNumber(keyPressed.KeyChar));
+
+            userChoice = int.Parse(keyPressed.KeyChar.ToString());
+            selectedHeroRace = (RaceType)userChoice;
+
+            //var heroTypeIndex = Console.ReadLine();
         }
         
         public static void LoadLogoIntro()

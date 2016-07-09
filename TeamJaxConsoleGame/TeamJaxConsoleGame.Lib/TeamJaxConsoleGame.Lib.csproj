@@ -80,6 +80,8 @@
     <Compile Include="Factory\GameScreenFactory\InventorySceneFactory.cs" />
     <Compile Include="Factory\GameScreenFactory\SceneCreater.cs" />
     <Compile Include="Factory\GameScreenFactory\TownSceneFactory.cs" />
+    <Compile Include="Factory\HeroFactory\HeroCreater.cs" />
+    <Compile Include="Factory\HeroFactory\HeroFactory.cs" />
     <Compile Include="Factory\TownFactory.cs" />
     <Compile Include="GameEnginge.cs" />
     <Compile Include="Scenes\GameScene.cs" />

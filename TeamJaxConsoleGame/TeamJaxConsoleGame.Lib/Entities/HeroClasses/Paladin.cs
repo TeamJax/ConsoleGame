@@ -9,8 +9,8 @@
 
     public class Paladin : Hero
     {
-        public Paladin(string name, RaceType race) 
-            : base(name, race)
+        public Paladin(string name, RaceType race, int stamina, int strenght, int intelligence, int agility, int armorRating) 
+            : base(name, race,  stamina,  strenght,  intelligence,  agility,  armorRating)
         {
             this.Stamina = 160;
             this.Strenght = 90;

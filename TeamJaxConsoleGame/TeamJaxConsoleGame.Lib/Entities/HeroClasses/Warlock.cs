@@ -9,8 +9,8 @@
 
     public class Warlock : Hero
     {
-        public Warlock(string name, RaceType race) 
-            : base(name, race)
+        public Warlock(string name, RaceType race, int stamina, int strenght, int intelligence, int agility, int armorRating) 
+            : base(name, race,  stamina,  strenght,  intelligence,  agility,  armorRating)
         {
             this.Stamina = 80;
             this.Strenght = 50;

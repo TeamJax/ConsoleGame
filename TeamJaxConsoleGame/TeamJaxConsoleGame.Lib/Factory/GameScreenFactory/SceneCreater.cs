@@ -1,20 +1,11 @@
 ﻿namespace TeamJaxConsoleGame.Lib.Factory.GameScreenFactory
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-    using TeamJaxConsoleGame.Lib.Entities;
-    using TeamJaxConsoleGame.Lib.Enumerations;
-    using TeamJaxConsoleGame.Lib.Scenes;
+    using Entities;
+    using Enumerations;
+    using Scenes;
 
     public class SceneCreater
     {
-        public SceneCreater()
-        {
-        }
-
         public GameScene CreateScene(GameSceneType sceneType, Hero hero, Location location)
         {
             GameSceneFactory sceneFactory;

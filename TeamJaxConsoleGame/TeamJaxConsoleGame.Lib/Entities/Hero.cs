@@ -17,7 +17,7 @@
         private int intelligence;
         private int strenght;
               
-        public Hero(string name, RaceType race)
+        public Hero(string name, RaceType race, int stamina, int strenght, int intelligence, int agility, int armorRating )
         {
             this.Name = name;
             this.Health = HeroConstants.STARTING_HEALTH;
@@ -26,6 +26,13 @@
             this.Skills = new List<IAbility>();
             this.Abilities = new List<Ability>();
             this.Race = race;
+            this.Stamina = stamina;// 80;
+            this.Strenght = strenght;// 50;
+            this.Intelligence = intelligence; // 30;
+            this.Health = this.Strenght + this.Stamina;
+            this.Agility = agility;// 100;
+            this.ArmorRating = armorRating;// 10;
+            this.AttackDamage = this.Agility * 2 + this.Strenght;
         }
 
         public RaceType Race { get; set; }
@@ -50,7 +57,7 @@
 
         public override string GiveDescription()
         {
-            return string.Format("You are {0}. Another great hero seeking fortune and fame in the land of Teleriknia.", this.Name);
+            return string.Format("You are {0}. A {1}. Another great hero seeking fortune and fame in the land of Teleriknia.", this.Name, this.Race);
         }
     }
 }

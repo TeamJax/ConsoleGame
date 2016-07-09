@@ -9,8 +9,8 @@
 
     public class DeathKnight : Hero
     {
-        public DeathKnight(string name, RaceType race) 
-            : base(name, race)
+        public DeathKnight(string name, RaceType race, int stamina, int strenght, int intelligence, int agility, int armorRating)
+            : base(name, race, stamina, strenght, intelligence, agility, armorRating)
         {
             this.Stamina = 150;
             this.Strenght = 100;
