@@ -70,7 +70,7 @@
             }
         }
 
-        private void WriteOptionsMenu()
+        protected void WriteOptionsMenu()
         {
             this.OptionsMenuItems.Keys.OrderBy(x => x);
 

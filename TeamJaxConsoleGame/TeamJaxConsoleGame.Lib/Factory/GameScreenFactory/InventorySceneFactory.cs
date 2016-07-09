@@ -21,7 +21,9 @@ namespace TeamJaxConsoleGame.Lib.Factory.GameScreenFactory
                 { "Shop", GameSceneType.Shop  }
             };
 
-            return new TownScene(location, hero, GameSceneType.Town, menuOptions);
+
+
+            return new InventoryScene(location, hero, GameSceneType.Invenotry, menuOptions);
         }
     }
 }

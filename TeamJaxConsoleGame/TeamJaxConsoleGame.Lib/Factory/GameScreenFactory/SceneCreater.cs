@@ -27,8 +27,7 @@
                 //case GameSceneType.Forest:
                 //    break;
                 case GameSceneType.Invenotry:
-                    sceneFactory = new TownSceneFactory();
-                    location.LocationDescription = "Actually this is a town scene dicquised as an Invenotry. After we implement inventory - show inventory here";
+                    sceneFactory = new InventorySceneFactory();
                     return sceneFactory.CreateScene(hero, location);
                 //case GameSceneType.Battle:
                 //    break;

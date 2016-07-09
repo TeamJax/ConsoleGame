@@ -61,6 +61,15 @@ namespace TeamJaxConsoleGame.Lib.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to This is your inventory.
+        /// </summary>
+        internal static string InvetoryDescription {
+            get {
+                return ResourceManager.GetString("InvetoryDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Enter your hero&apos;s name.
         /// </summary>
         internal static string LoadHearoCreation {

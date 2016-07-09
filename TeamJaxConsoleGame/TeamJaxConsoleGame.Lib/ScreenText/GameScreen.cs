@@ -1,16 +1,12 @@
 ﻿namespace TeamJaxConsoleGame.Lib.ScreenText
 {
-    //TODO: Clear unused
     using System;
     using System.Collections.Generic;
     using System.IO;
-    using System.Linq;
-    using System.Text;
     using System.Threading;
-    using System.Threading.Tasks;
 
     using Resources;
-
+    using Enumerations;
     public class GameScreen
     {
         private static int sleepdelay = 50;
@@ -26,9 +22,23 @@
             //Console.BufferWidth = 120;
         }
 
-        public static void LoadHearoCreation()
+        public static void LoadHearoCreation(out string userHeroNameInput)
         {
             Console.WriteLine(GameScreenResources.LoadHearoCreation);
+            userHeroNameInput = Console.ReadLine();
+            var heroTypeValues = Enum.GetValues(typeof(HeroType));
+
+            var index = 1;
+            foreach (var item in heroTypeValues)
+            {
+                Console.Write("{0}: {1}; ", index, item);
+                index++;
+            }
+            Console.WriteLine();
+            
+            //TODO: convert user input into herotype;
+            //TODO: validate user input
+            var heroTypeIndex = Console.ReadLine();
         }
         
         public static void LoadLogoIntro()

@@ -32,8 +32,9 @@
 
         protected static void CreateHero()
         {
-            GameScreen.LoadHearoCreation();
-            var userHeroNameInput = Console.ReadLine();
+            string userHeroNameInput;
+            GameScreen.LoadHearoCreation(out userHeroNameInput);
+
             playerHero = new Hero(userHeroNameInput, RaceType.Human);
         }
 
