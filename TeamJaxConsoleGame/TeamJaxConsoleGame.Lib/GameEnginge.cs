@@ -38,17 +38,19 @@
         }
 
         private static void Play()
-        { 
+        {
+            GameSceneType selectedSceneType;
             CreateHero();
             var sceneCreater = new SceneCreater();
             InitializeStartingScene(sceneCreater); // new TownSceneFactory(), new TownFactory());
+            selectedSceneType = currentScene.SceneType;
 
             while (true)
             {
                 Console.Clear();
                 currentScene.DescribeScene();
 
-                ConsoleKeyInfo keyPressed;
+                ConsoleKeyInfo keyPressed = new ConsoleKeyInfo();
                 bool showInvalidInput = false;
 
                 do
@@ -58,19 +60,38 @@
                         Console.WriteLine("Invalid input!");
                     }
 
-                    keyPressed = Console.ReadKey();
+                    if (selectedSceneType == GameSceneType.Invenotry)
+                    {
+                        //0 = 48; 9 = 57; 10 = 58 (:); 11 = 59(;)
+                        int inventoryInput;
+
+                        //TODO: Do validations
+                        // (0 < inventoryInput) { charRepresentation = 48 + inventoryInput }
+                        while (int.TryParse(Console.ReadLine(), out inventoryInput))
+                        {
+                            char charRepresentation = (char)(48 + inventoryInput);
+                            ConsoleKey keyRepresent;
+                            Enum.TryParse<ConsoleKey>(charRepresentation.ToString(), out keyRepresent);
+                            keyPressed = new ConsoleKeyInfo(charRepresentation, keyRepresent, false, false, false);
+                        }
+                    }
+                    else
+                    {
+                        keyPressed = Console.ReadKey();
+                    }
+
                     showInvalidInput = true;
 
 
                 } while (!currentScene.ValidateUserInput(keyPressed));
 
-                GameSceneType selectedScene = currentScene.GetUserSelectedScene(keyPressed);
-                
-                currentScene = sceneCreater.CreateScene(selectedScene, playerHero, currentScene.CurrentLocation);
+                selectedSceneType = currentScene.GetUserSelectedScene(keyPressed);
 
-                //TODO:think how to change the locations?
-
+                currentScene = sceneCreater.CreateScene(selectedSceneType, playerHero, currentScene.CurrentLocation);
             }
+            //TODO:think how to change the locations?
+
         }
     }
 }
+

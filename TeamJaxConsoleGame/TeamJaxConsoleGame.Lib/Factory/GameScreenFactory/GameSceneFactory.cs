@@ -5,6 +5,6 @@
 
     public abstract class GameSceneFactory
     {
-        public abstract GameScene CreateScene(Hero hero,Location locatiom);
+        public abstract GameScene CreateScene(Hero hero,Location location);
     }
 }

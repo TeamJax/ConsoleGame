@@ -76,6 +76,7 @@
     <Compile Include="Factory\ForestFactory.cs" />
     <Compile Include="Factory\GameFactory.cs" />
     <Compile Include="Factory\GameScreenFactory\GameSceneFactory.cs" />
+    <Compile Include="Factory\GameScreenFactory\InventorySceneFactory.cs" />
     <Compile Include="Factory\GameScreenFactory\SceneCreater.cs" />
     <Compile Include="Factory\GameScreenFactory\TownSceneFactory.cs" />
     <Compile Include="Factory\TownFactory.cs" />
@@ -97,6 +98,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TownOptionsMenu.resx</DependentUpon>
     </Compile>
+    <Compile Include="Scenes\InventoryScene.cs" />
     <Compile Include="Scenes\TownScene.cs" />
     <Compile Include="ScreenText\GameScreen.cs" />
   </ItemGroup>
