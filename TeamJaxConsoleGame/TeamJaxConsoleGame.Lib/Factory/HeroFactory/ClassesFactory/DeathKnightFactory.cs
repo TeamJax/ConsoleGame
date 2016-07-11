@@ -36,11 +36,11 @@ namespace TeamJaxConsoleGame.Lib.Factory.HeroFactory.ClassesFactory
         {
             return new List<IAbility>
             {
-                new DamageAbility("Death and Decay", 10, 50),
-                new DamageAbility("Blood Boil", 20, 10),
-                new DamageAbility("Icy Touch", 50, 30),
-                new DamageAbility("Plague Strike", 40, 40),
-                new HealAbility("Dark Simulacrum", 30, 40)
+                new DamageAbility("Death and Decay", 10, 50, "Corrupts the ground targeted by the Death Knight"),
+                new DamageAbility("Blood Boil", 20, 10, "Corrupts the ground targeted by the Death Knight"),
+                new DamageAbility("Icy Touch", 50, 30, "Corrupts the ground targeted by the Death Knight"),
+                new DamageAbility("Plague Strike", 40, 40, "Corrupts the ground targeted by the Death Knight"),
+                new HealAbility("Dark Simulacrum", 30, 40, "Corrupts the ground targeted by the Death Knight")
             };
         }
 

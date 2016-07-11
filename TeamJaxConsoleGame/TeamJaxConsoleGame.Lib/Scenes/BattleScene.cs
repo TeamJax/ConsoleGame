@@ -2,9 +2,6 @@
 {
     using System;
     using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
     using TeamJaxConsoleGame.Lib.Entities;
     using TeamJaxConsoleGame.Lib.Enumerations;
 
@@ -16,7 +13,7 @@
             GameSceneType sceneType, 
             IDictionary<string, GameSceneType> optionsMenuItems,
             IDictionary<string, BattleSceneOptions> battleOptions) 
-            : base(currentLocation, hero, sceneType, optionsMenuItems)
+            : base(currentLocation, hero, sceneType, optionsMenuItems, ConsoleColor.Red)
         {
         }
 

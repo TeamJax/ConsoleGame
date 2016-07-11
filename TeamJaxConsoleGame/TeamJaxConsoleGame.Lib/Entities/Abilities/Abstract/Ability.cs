@@ -11,7 +11,7 @@
         private int abilityPower;
         private string description;
 
-        protected Ability(string name, AbilityType type, int resourceCost, int abilityPower, string description = null)   
+        protected Ability(string name, AbilityType type, int resourceCost, int abilityPower, string description)   
             : base(name)        
         {
             this.Type = type;

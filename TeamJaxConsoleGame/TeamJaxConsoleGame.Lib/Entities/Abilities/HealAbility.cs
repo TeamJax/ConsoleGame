@@ -6,7 +6,7 @@
 
     public class HealAbility : Ability, IGameObject
     {
-        public HealAbility(string name, int resourceCost, int abilityPower, string description = null) 
+        public HealAbility(string name, int resourceCost, int abilityPower, string description) 
             : base(name, AbilityType.Heal, resourceCost, abilityPower, description)
         {
         }

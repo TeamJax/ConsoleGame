@@ -2,7 +2,6 @@
 {
     using Constants;
     using Entities;
-    using Entities.Abilities;
     using Enumerations;
     using Factory;
     using Factory.GameSceneFactory;
@@ -11,7 +10,7 @@
     using ScreenText;
     using System;
 
-    public abstract class GameEnginge
+    public abstract class GameEngine
     {
         private static Hero playerHero;
         protected static GameScene currentScene;
@@ -41,13 +40,6 @@
             var heroCreater = new HeroCreater();
 
             playerHero = heroCreater.CreateHero(userHeroNameInput, selectedHeroRace, selectedHeroType);
-
-            //testint
-
-            playerHero.Abilities.Add(new DamageAbility("test dmg ability", 1, 5, "Very powerfull ability"));
-            playerHero.Abilities.Add(new HealAbility("test heal abbbb", 1, 10, "Very weak heal ability"));
-
-            //testing
         }
 
         private static void Play()

@@ -6,7 +6,7 @@
 
     public class DamageAbility : Ability, IGameObject
     {
-        public DamageAbility(string name, int resourceCost, int abilityPower, string description = null) 
+        public DamageAbility(string name, int resourceCost, int abilityPower, string description) 
             : base(name, AbilityType.Damage, resourceCost, abilityPower, description)
         {
         }

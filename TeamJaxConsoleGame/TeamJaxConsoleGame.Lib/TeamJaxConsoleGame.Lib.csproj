@@ -99,7 +99,7 @@
     <Compile Include="Factory\HeroFactory\HeroCreater.cs" />
     <Compile Include="Factory\HeroFactory\HeroFactory.cs" />
     <Compile Include="Factory\TownFactory.cs" />
-    <Compile Include="GameEnginge.cs" />
+    <Compile Include="GameEngine.cs" />
     <Compile Include="Scenes\BattleScene.cs" />
     <Compile Include="Interfaces\ISkill.cs" />
     <Compile Include="Scenes\GameScene.cs" />

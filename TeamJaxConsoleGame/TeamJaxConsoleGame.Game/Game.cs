@@ -5,7 +5,7 @@
     /// <summary>
     /// Class for the main entry point of the program.
     /// </summary>
-    internal class Game : GameEnginge
+    internal class Game : GameEngine
     {
         /// <summary>
         /// The entry point of the console application.

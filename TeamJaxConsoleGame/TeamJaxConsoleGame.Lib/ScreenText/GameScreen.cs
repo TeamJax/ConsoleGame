@@ -7,6 +7,7 @@
 
     using Resources;
     using Enumerations;
+
     public class GameScreen
     {
         private static int sleepdelay = 50;
@@ -73,6 +74,25 @@
             selectedHeroType = (HeroType)userChoice;
         }
         
+        
+        public static void PrintMap()
+        {
+            Console.Clear();
+            List<char> row = new List<char>();
+            Console.ForegroundColor = ConsoleColor.Green;
+            foreach (var item in Map)
+            {
+                Console.Write(item);
+            }
+        }
+
+        public static void PrintOutput(string output, ConsoleColor color)
+        {
+            Console.ForegroundColor = color;
+            Console.WriteLine("=*********************************************************************=");
+            Console.WriteLine(output);
+        }
+
         public static void LoadLogoIntro()
         {
             SetScreen();
@@ -136,17 +156,6 @@
                 {
                     row.Add(item);
                 }
-            }
-        }
-        
-        public static void PrintMap()
-        {
-            Console.Clear();
-            List<char> row = new List<char>();
-            Console.ForegroundColor = ConsoleColor.Green;
-            foreach (var item in Map)
-            {
-                Console.Write(item);
             }
         }
     }
