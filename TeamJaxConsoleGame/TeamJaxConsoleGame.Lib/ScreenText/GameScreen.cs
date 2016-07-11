@@ -12,6 +12,7 @@
         private static int sleepdelay = 50;
             //TODO: move to GameScreenConstants
         private static string logo = File.ReadAllText(@"..\..\Content\TextArt\logo.txt");
+        private static string Map = File.ReadAllText(@"..\..\Content\TextArt\map.txt");
 
         public static void SetScreen()
         {
@@ -38,8 +39,6 @@
             }
             Console.WriteLine();
 
-            //TODO: convert user input into herotype;
-            //TODO: validate user input
             ConsoleKeyInfo keyPressed;
 
             do
@@ -72,8 +71,6 @@
 
             userChoice = int.Parse(keyPressed.KeyChar.ToString());
             selectedHeroType = (HeroType)userChoice;
-
-            //var heroTypeIndex = Console.ReadLine();
         }
         
         public static void LoadLogoIntro()
@@ -83,7 +80,7 @@
             #region PrintLogo
 
             Console.Clear();
-            PrintLogoAnimated();
+            PrintLogoAnimated(logo);
 
             #endregion PrintLogo
 
@@ -119,11 +116,11 @@
             }
         }
 
-        private static void PrintLogoAnimated()
+        private static void PrintLogoAnimated(string fileSource)
         {
             List<char> row = new List<char>();
             Console.ForegroundColor = ConsoleColor.Green;
-            foreach (var item in logo)
+            foreach (var item in fileSource)
             {
                 if (item == '\n')
                 {
