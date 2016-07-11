@@ -61,6 +61,15 @@ namespace TeamJaxConsoleGame.Lib.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Choose hero&apos;s class.
+        /// </summary>
+        internal static string ClassChoice {
+            get {
+                return ResourceManager.GetString("ClassChoice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to This is your inventory.
         /// </summary>
         internal static string InvetoryDescription {
@@ -75,6 +84,15 @@ namespace TeamJaxConsoleGame.Lib.Resources {
         internal static string LoadHearoCreation {
             get {
                 return ResourceManager.GetString("LoadHearoCreation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Choose hero&apos;s race.
+        /// </summary>
+        internal static string RaceChoice {
+            get {
+                return ResourceManager.GetString("RaceChoice", resourceCulture);
             }
         }
     }

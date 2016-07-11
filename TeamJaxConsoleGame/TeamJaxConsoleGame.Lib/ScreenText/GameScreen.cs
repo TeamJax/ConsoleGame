@@ -27,9 +27,10 @@
             Console.WriteLine(GameScreenResources.LoadHearoCreation);
             userHeroNameInput = Console.ReadLine();
 
-            var heroTypeValues = Enum.GetValues(typeof(HeroType));
+            var heroTypeValues = Enum.GetValues(typeof(RaceType));
 
             var index = 1;
+            Console.WriteLine(GameScreenResources.RaceChoice);
             foreach (var item in heroTypeValues)
             {
                 Console.Write("{0}: {1}; ", index, item);
@@ -49,11 +50,12 @@
             } while (!char.IsNumber(keyPressed.KeyChar));
 
             int userChoice = int.Parse(keyPressed.KeyChar.ToString());
-            selectedHeroType = (HeroType)userChoice;
+            selectedHeroRace = (RaceType)userChoice;
 
-            heroTypeValues = Enum.GetValues(typeof(RaceType));
+            heroTypeValues = Enum.GetValues(typeof(HeroType)); 
 
             index = 1;
+            Console.WriteLine(GameScreenResources.ClassChoice);
             foreach (var item in heroTypeValues)
             {
                 Console.Write("{0}: {1}; ", index, item);
@@ -69,7 +71,7 @@
             } while (!char.IsNumber(keyPressed.KeyChar));
 
             userChoice = int.Parse(keyPressed.KeyChar.ToString());
-            selectedHeroRace = (RaceType)userChoice;
+            selectedHeroType = (HeroType)userChoice;
 
             //var heroTypeIndex = Console.ReadLine();
         }

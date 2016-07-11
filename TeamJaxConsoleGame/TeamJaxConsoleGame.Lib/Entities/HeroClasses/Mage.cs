@@ -1,16 +1,13 @@
 ﻿namespace TeamJaxConsoleGame.Lib.Entities.HeroClasses
 {
     using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-    using TeamJaxConsoleGame.Lib.Enumerations;
+
+    using Enumerations;
 
     public class Mage : Hero
     {
         public Mage(string name, RaceType race, int stamina, int strenght, int intelligence, int agility, int armorRating)
-            : base(name, race, stamina, strenght, intelligence, agility, armorRating)
+            : base(name, race, HeroType.Mage, stamina, strenght, intelligence, agility, armorRating)
         {
             this.Stamina = 50;
             this.Strenght = 100;
@@ -19,6 +16,11 @@
             this.Agility = 15;
             this.ArmorRating = 5;
             this.AttackDamage = this.Agility * 2 + this.Intelligence;
+        }
+
+        public override void UseSpecialAbility()
+        {
+            throw new NotImplementedException();
         }
     }
 }

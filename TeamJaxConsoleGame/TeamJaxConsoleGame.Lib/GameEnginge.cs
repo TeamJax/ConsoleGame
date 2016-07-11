@@ -5,6 +5,7 @@
     using Enumerations;
     using Factory;
     using Factory.GameScreenFactory;
+    using Factory.HeroFactory;
     using Scenes;
     using ScreenText;
     using System;
@@ -36,31 +37,9 @@
             HeroType selectedHeroType;
             RaceType selectedHeroRace;
             GameScreen.LoadHearoCreation(out userHeroNameInput, out selectedHeroType, out selectedHeroRace);
+            var heroCreater = new HeroCreater();
 
-            switch (selectedHeroType)
-            {
-                case HeroType.DeathKnight:
-                    break;
-                case HeroType.Hunter:
-                    break;
-                case HeroType.Mage:
-                    break;
-                case HeroType.Monk:
-                    break;
-                case HeroType.Paladin:
-                    break;
-                case HeroType.Priest:
-                    break;
-                case HeroType.Rogue:
-                    break;
-                case HeroType.Warlock:
-                    break;
-                case HeroType.Warrior:
-                    break;
-                default:
-                    break;
-            }
-            playerHero = new Hero(userHeroNameInput, RaceType.Human, 10, 10, 10, 10, 10);
+            playerHero = heroCreater.CreateHero(userHeroNameInput, selectedHeroRace, selectedHeroType);
         }
 
         private static void Play()

@@ -1,11 +1,14 @@
 ﻿namespace TeamJaxConsoleGame.Lib.Constants
 {
-    internal static class HeroConstants
-    {
-        internal static int STARTING_HEALTH = 100;
+    internal class HeroConstants
+    {        
+        internal const int DEATH_KNIGHT_ARMOR_RATING = 20;
+        internal const int DEATH_KNIGHT_STAMINA = 150;
+        internal const int DEATH_KNIGHT_STRENGHT = 150;
+        internal const int DEATH_KNIGHT_AGILITY = 150;
+        internal const int DEATH_KNIGHT_INTELLIGENCE = 150;
 
-        internal static int ATTACK_DAMAGE = 10;
+        //TODO: Add constants for other classes
 
-        internal static int ARMOR_RATING = 5;
     }
 }
