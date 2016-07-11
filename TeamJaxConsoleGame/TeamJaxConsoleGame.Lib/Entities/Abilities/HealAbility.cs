@@ -2,11 +2,12 @@
 {
     using Enumerations;
     using Interfaces;
+    using Abilities.Abstract;
 
     public class HealAbility : Ability, IGameObject
     {
-        public HealAbility(string name, AbilityType type, int resourceCost, int abilityPower, string description = null) 
-            : base(name, type, resourceCost, abilityPower, description)
+        public HealAbility(string name, int resourceCost, int abilityPower, string description = null) 
+            : base(name, AbilityType.Heal, resourceCost, abilityPower, description)
         {
         }
 

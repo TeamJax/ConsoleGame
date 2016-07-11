@@ -99,6 +99,7 @@
     <Compile Include="Factory\TownFactory.cs" />
     <Compile Include="GameEnginge.cs" />
     <Compile Include="Scenes\BattleScene.cs" />
+    <Compile Include="Interfaces\ISkill.cs" />
     <Compile Include="Scenes\GameScene.cs" />
     <Compile Include="Interfaces\IAbility.cs" />
     <Compile Include="Interfaces\IFighter.cs" />

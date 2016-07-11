@@ -10,6 +10,7 @@
         {           
         }
 
+        //todo Change method name to UseClassPowerup
         public override void UseSpecialAbility()
         {
             this.ArmorRating += 50;
