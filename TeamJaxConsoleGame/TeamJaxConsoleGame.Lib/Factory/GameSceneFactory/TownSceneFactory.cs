@@ -12,10 +12,10 @@
         {
             Dictionary<string, GameSceneType> menuOptions = new Dictionary<string, GameSceneType>()
             {
-                { "Inventory", GameSceneType.Invenotry  },
-                { "Travel", GameSceneType.Travel  },
-                { "Forest", GameSceneType.Forest  },
-                { "Shop", GameSceneType.Shop  }
+                { GameSceneType.Invenotry.ToString(), GameSceneType.Invenotry  },
+                { GameSceneType.Travel.ToString(), GameSceneType.Travel  },
+                { GameSceneType.Forest.ToString(), GameSceneType.Forest  },
+                { GameSceneType.Shop.ToString(), GameSceneType.Shop  }
             };
 
             return new TownScene(location, hero, GameSceneType.Town, menuOptions);

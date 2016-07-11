@@ -15,13 +15,11 @@ namespace TeamJaxConsoleGame.Lib.Factory.GameSceneFactory
         {
             Dictionary<string, GameSceneType> menuOptions = new Dictionary<string, GameSceneType>()
             {
-                { "Town", GameSceneType.Invenotry  },
-                { "Travel", GameSceneType.Travel  },
-                { "Forest", GameSceneType.Forest  },
-                { "Shop", GameSceneType.Shop  }
+                { GameSceneType.Town.ToString(), GameSceneType.Town  },
+                { GameSceneType.Travel.ToString(), GameSceneType.Travel },
+                { GameSceneType.Forest.ToString(), GameSceneType.Forest },
+                { GameSceneType.Shop.ToString(), GameSceneType.Shop }
             };
-
-
 
             return new InventoryScene(location, hero, GameSceneType.Invenotry, menuOptions);
         }

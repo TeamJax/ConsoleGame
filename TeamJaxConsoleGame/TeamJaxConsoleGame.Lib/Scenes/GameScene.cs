@@ -3,23 +3,33 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using System.Text;
 
     using Entities;
     using Enumerations;
+    using ScreenText;
 
     public abstract class GameScene
     {
         private IDictionary<string, GameSceneType> optionsMenuItems;
         private IDictionary<int, GameSceneType> userChoiceMenu;
         
-        public GameScene(Location currentLocation, Hero hero, GameSceneType sceneType, IDictionary<string, GameSceneType> optionsMenuItems)
+        public GameScene(
+            Location currentLocation,
+            Hero hero, 
+            GameSceneType sceneType,
+            IDictionary<string, GameSceneType> optionsMenuItems, 
+            ConsoleColor sceneColor)
         {
             this.CurrentLocation = currentLocation;
             this.Hero = hero;
             this.OptionsMenuItems = optionsMenuItems;
             this.UserChoiceMenu = this.CreateUserChoiceMenu(this.OptionsMenuItems);
+            this.SceneColor = sceneColor;
         }
 
+        public ConsoleColor SceneColor { get; set; }
+        
         public Location CurrentLocation { get; set; }
 
         public Hero Hero { get; set; }
@@ -73,12 +83,15 @@
         protected void WriteOptionsMenu()
         {
             this.OptionsMenuItems.Keys.OrderBy(x => x);
+            var output = new StringBuilder();
 
             foreach (var item in this.UserChoiceMenu)
             {
-                Console.Write("{0}.{1}; ", item.Key, item.Value);
+                output.Append(String.Format("{0}.{1}; ", item.Key, item.Value));
             }
-            Console.WriteLine();
+
+            output.AppendLine();
+            GameScreen.PrintOutput(output.ToString(), this.SceneColor);
         }
 
         private IDictionary<int, GameSceneType> CreateUserChoiceMenu(IDictionary<string, GameSceneType> optionsMenuItems)
@@ -136,8 +149,10 @@
 
         public virtual void DescribeScene()
         {
-            Console.WriteLine(this.CurrentLocation.GiveDescription());
-            Console.WriteLine(this.Hero.GiveDescription());
+            var output = new StringBuilder();
+            output.AppendLine(this.CurrentLocation.GiveDescription());
+            output.AppendLine(this.Hero.GiveDescription());
+            GameScreen.PrintOutput(output.ToString(), this.SceneColor);
             this.WriteOptionsMenu();
         }
     }

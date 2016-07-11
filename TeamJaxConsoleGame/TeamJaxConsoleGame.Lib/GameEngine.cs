@@ -46,7 +46,7 @@
         {
             CreateHero();
             var sceneCreater = new SceneCreater();
-            InitializeStartingScene(sceneCreater); // new TownSceneFactory(), new TownFactory());
+            InitializeStartingScene(sceneCreater);
             var selectedSceneType = currentScene.SceneType;
 
             while (true)
@@ -66,11 +66,10 @@
 
                     if (selectedSceneType == GameSceneType.Invenotry)
                     {
-                        //0 = 48; 9 = 57; 10 = 58 (:); 11 = 59(;)
+                        //ASCI Codes chars values:
+                        //'0' = 48; '9' = 57; '10' = 58
                         int inventoryInput;
-
-                        //TODO: Do validations
-                        // (0 < inventoryInput) { charRepresentation = 48 + inventoryInput }
+                        
                         while (int.TryParse(Console.ReadLine(), out inventoryInput))
                         {
                             char charRepresentation = (char)(48 + inventoryInput);

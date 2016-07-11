@@ -1,11 +1,7 @@
 ﻿namespace TeamJaxConsoleGame.Lib.Factory.GameSceneFactory
 {
     using Enumerations;
-    using System;
     using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
     using TeamJaxConsoleGame.Lib.Entities;
     using TeamJaxConsoleGame.Lib.Scenes;
 
@@ -15,10 +11,10 @@
         {
             Dictionary<string, GameSceneType> menuOptions = new Dictionary<string, GameSceneType>()
             {
-                { "Inventory", GameSceneType.Invenotry  },
-                { "Travel", GameSceneType.Travel  },
-                { "Forest", GameSceneType.Forest  },
-                { "Shop", GameSceneType.Shop  }
+                { GameSceneType.Invenotry.ToString(), GameSceneType.Invenotry },
+                { GameSceneType.Travel.ToString(), GameSceneType.Travel },
+                { GameSceneType.Forest.ToString(), GameSceneType.Forest },
+                { GameSceneType.Shop.ToString(), GameSceneType.Shop }
             };
 
             //TODO:  Add BattleMenuOptions
