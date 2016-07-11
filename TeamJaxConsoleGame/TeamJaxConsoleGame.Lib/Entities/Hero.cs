@@ -28,12 +28,12 @@
             this.Abilities = new List<Ability>();
             this.Race = race;
             this.HeroType = type;
-            this.Stamina = stamina;// 80;
-            this.Strenght = strenght;// 50;
-            this.Intelligence = intelligence; // 30;
+            this.Stamina = stamina;
+            this.Strenght = strenght;
+            this.Intelligence = intelligence;
             this.Health = this.Strenght + this.Stamina;
-            this.Agility = agility;// 100;
-            this.ArmorRating = armorRating;// 10;
+            this.Agility = agility;
+            this.ArmorRating = armorRating;
             this.AttackDamage = this.Agility * 2 + this.Strenght;
         }
 
