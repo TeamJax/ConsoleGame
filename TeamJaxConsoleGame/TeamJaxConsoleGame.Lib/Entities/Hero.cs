@@ -8,6 +8,7 @@
     using Skills;
     using Constants;
     using Enumerations;
+    using Common;
 
     public abstract class Hero : ItemHolder, IFighter
     {
@@ -16,6 +17,9 @@
         private int agility;
         private int intelligence;
         private int strenght;
+        private int health;
+        private int attackDamage;
+        private int armorRating;
               
         public Hero(string name, RaceType race, HeroType type, int stamina, int strenght, int intelligence, int agility, int armorRating )
         {
@@ -24,12 +28,12 @@
             this.Abilities = new List<Ability>();
             this.Race = race;
             this.HeroType = type;
-            this.Stamina = stamina;// 80;
-            this.Strenght = strenght;// 50;
-            this.Intelligence = intelligence; // 30;
+            this.Stamina = stamina;
+            this.Strenght = strenght;
+            this.Intelligence = intelligence;
             this.Health = this.Strenght + this.Stamina;
-            this.Agility = agility;// 100;
-            this.ArmorRating = armorRating;// 10;
+            this.Agility = agility;
+            this.ArmorRating = armorRating;
             this.AttackDamage = this.Agility * 2 + this.Strenght;
         }
 
@@ -37,19 +41,96 @@
 
         public HeroType HeroType { get; set; }
 
-        public int Stamina { get; set; }
+        public int Stamina
+        {
+            get { return this.stamina; }
+            set
+            {
+                Validator.ValidateIntRange(value, ValidatorConstants.MinStatLength, ValidatorConstants.MaxStatLength,
+                    string.Format(ValidatorConstants.NumbersMustBeBetweenMinAndMax,
+                    "Stamina", ValidatorConstants.MinStatLength, ValidatorConstants.MaxStatLength));
 
-        public int Agility { get; set; }
+                this.stamina = value;
+            }
+        }
 
-        public int Intelligence { get; set; }
+        public int Agility
+        {
+            get { return this.agility; }
+            set
+            {
+                Validator.ValidateIntRange(value, ValidatorConstants.MinStatLength, ValidatorConstants.MaxStatLength,
+                    string.Format(ValidatorConstants.NumbersMustBeBetweenMinAndMax,
+                    "Agility", ValidatorConstants.MinStatLength, ValidatorConstants.MaxStatLength));
 
-        public int Strenght { get; set; }
+                this.agility = value;
+            }
+        }
 
-        public int Health { get; set; }
+        public int Intelligence
+        {
+            get { return this.intelligence; }
+            set
+            {
+                Validator.ValidateIntRange(value, ValidatorConstants.MinStatLength, ValidatorConstants.MaxStatLength,
+                    string.Format(ValidatorConstants.NumbersMustBeBetweenMinAndMax,
+                    "Intelligence", ValidatorConstants.MinStatLength, ValidatorConstants.MaxStatLength));
 
-        public int AttackDamage { get; set; }
+                this.intelligence = value;
+            }
+        }
 
-        public int ArmorRating { get; set; }  
+        public int Strenght
+        {
+            get { return this.strenght; }
+            set
+            {
+                Validator.ValidateIntRange(value, ValidatorConstants.MinStatLength, ValidatorConstants.MaxStatLength,
+                    string.Format(ValidatorConstants.NumbersMustBeBetweenMinAndMax,
+                    "Strenght", ValidatorConstants.MinStatLength, ValidatorConstants.MaxStatLength));
+
+                this.strenght = value;
+            }
+        }
+
+        public int Health
+        {
+            get { return this.health; }
+            set
+            {
+                Validator.ValidateIntRange(value, ValidatorConstants.MinStatLength, ValidatorConstants.MaxStatLength,
+                    string.Format(ValidatorConstants.NumbersMustBeBetweenMinAndMax,
+                    "Health", ValidatorConstants.MinStatLength, ValidatorConstants.MaxStatLength));
+
+                this.health = value;
+            }
+        }
+
+        public int AttackDamage
+        {
+            get { return this.attackDamage; }
+            set
+            {
+                Validator.ValidateIntRange(value, ValidatorConstants.MinStatLength, ValidatorConstants.MaxStatLength,
+                    string.Format(ValidatorConstants.NumbersMustBeBetweenMinAndMax,
+                    "AttackDamage", ValidatorConstants.MinStatLength, ValidatorConstants.MaxStatLength));
+
+                this.attackDamage = value;
+            }
+        }
+
+        public int ArmorRating
+        {
+            get { return this.armorRating; }
+            set
+            {
+                Validator.ValidateIntRange(value, ValidatorConstants.MinStatLength, ValidatorConstants.MaxStatLength,
+                    string.Format(ValidatorConstants.NumbersMustBeBetweenMinAndMax,
+                    "ArmorRating", ValidatorConstants.MinStatLength, ValidatorConstants.MaxStatLength));
+
+                this.armorRating = value;
+            }
+        }
 
         public IList<IAbility> Skills { get; set; }
 
