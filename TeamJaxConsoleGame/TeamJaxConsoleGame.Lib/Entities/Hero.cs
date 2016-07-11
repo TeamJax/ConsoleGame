@@ -1,14 +1,10 @@
 ﻿namespace TeamJaxConsoleGame.Lib.Entities
 {
-    using System;
     using System.Collections.Generic;
-
-    using Abilities;
-    using Interfaces;
-    using Skills;
+    using Common;
     using Constants;
     using Enumerations;
-    using Common;
+    using Interfaces; 
 
     public abstract class Hero : ItemHolder, IFighter
     {
@@ -21,11 +17,9 @@
         private int attackDamage;
         private int armorRating;
               
-        public Hero(string name, RaceType race, HeroType type, int stamina, int strenght, int intelligence, int agility, int armorRating )
+        protected Hero(string name, RaceType race, HeroType type, int stamina, int strenght, int intelligence, int agility, int armorRating)
         {
-            this.Name = name;
-            this.Skills = new List<IAbility>();
-            this.Abilities = new List<Ability>();
+            this.Name = name;           
             this.Race = race;
             this.HeroType = type;
             this.Stamina = stamina;
@@ -35,6 +29,8 @@
             this.Agility = agility;
             this.ArmorRating = armorRating;
             this.AttackDamage = this.Agility * 2 + this.Strenght;
+            this.Skills = new List<ISkill>();
+            this.Abilities = new List<IAbility>();
         }
 
         public RaceType Race { get; set; }
@@ -132,9 +128,9 @@
             }
         }
 
-        public IList<IAbility> Skills { get; set; }
+        public IList<ISkill> Skills { get; set; }
 
-        public IList<Ability> Abilities { get; set; }
+        public IList<IAbility> Abilities { get; set; }
 
         public abstract void UseSpecialAbility();
 

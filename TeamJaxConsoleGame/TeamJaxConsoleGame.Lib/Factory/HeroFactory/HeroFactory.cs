@@ -10,8 +10,8 @@ namespace TeamJaxConsoleGame.Lib.Factory.HeroFactory
     {
         public abstract Hero CreateHero(string name, RaceType race);
 
-        public abstract IList<IAbility> DefinedHeroSkills();
+        public abstract IList<IAbility> DefinedHeroAbilities();
 
-        public abstract IList<>
+        public abstract IList<ISkill> DefinedHeroSkills();
     }
 }
