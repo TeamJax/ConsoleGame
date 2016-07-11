@@ -80,7 +80,8 @@
             #region PrintLogo
 
             Console.Clear();
-            PrintLogoAnimated(Map);
+            //PrintLogoAnimated(logo);
+            PrintMap();
 
             #endregion PrintLogo
 
@@ -135,6 +136,14 @@
                 {
                     row.Add(item);
                 }
+            }
+        }
+        
+        public static void PrintMap()
+        {
+            foreach (var item in Map)
+            {
+                Console.WriteLine(item);
             }
         }
     }
