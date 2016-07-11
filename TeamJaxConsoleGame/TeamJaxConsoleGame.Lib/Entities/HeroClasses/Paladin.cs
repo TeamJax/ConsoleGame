@@ -6,7 +6,7 @@
     public class Paladin : Hero
     {
         public Paladin(string name, RaceType race, int stamina, int strenght, int intelligence, int agility, int armorRating)
-            : base(name, race, HeroType.Paladin, stamina, strenght, intelligence, agility, armorRating)
+            : base(name, race, HeroType.Paladin, ResourceType.Mana, stamina, strenght, intelligence, agility, armorRating)
         {
         }
 

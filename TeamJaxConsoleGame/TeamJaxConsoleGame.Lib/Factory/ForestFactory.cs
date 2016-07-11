@@ -9,7 +9,7 @@
     {
         public override IFighter CreateEnemyEntity()
         {
-            return new Enemy("Forest Bandit", 2, 4, 10);
+            return new Enemy("Forest Bandit", 2, 4, 10,2,2,2,2);
         }
     }
 }

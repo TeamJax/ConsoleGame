@@ -7,7 +7,7 @@
     public class Mage : Hero
     {
         public Mage(string name, RaceType race, int stamina, int strenght, int intelligence, int agility, int armorRating)
-            : base(name, race, HeroType.Mage, stamina, strenght, intelligence, agility, armorRating)
+            : base(name, race, HeroType.Mage, ResourceType.Mana, stamina, strenght, intelligence, agility, armorRating)
         {            
         }
 

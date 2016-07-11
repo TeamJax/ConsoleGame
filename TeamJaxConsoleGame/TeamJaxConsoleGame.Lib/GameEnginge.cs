@@ -44,8 +44,8 @@
 
             //testint
 
-            playerHero.Abilities.Add(new DamageAbility("test dmg ability", AbilityType.Damage, 1, 5, "Very powerfull ability"));
-            playerHero.Abilities.Add(new HealAbility("test heal abbbb", AbilityType.Heal, 1, 10, "Very weak heal ability"));
+            playerHero.Abilities.Add(new DamageAbility("test dmg ability", 1, 5, "Very powerfull ability"));
+            playerHero.Abilities.Add(new HealAbility("test heal abbbb", 1, 10, "Very weak heal ability"));
 
             //testing
         }

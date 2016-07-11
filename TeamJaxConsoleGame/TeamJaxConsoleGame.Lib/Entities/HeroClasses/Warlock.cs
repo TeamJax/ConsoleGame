@@ -6,7 +6,7 @@
     public class Warlock : Hero
     {
         public Warlock(string name, RaceType race, int stamina, int strenght, int intelligence, int agility, int armorRating) 
-            : base(name, race, HeroType.Warlock,  stamina,  strenght,  intelligence,  agility,  armorRating)
+            : base(name, race, HeroType.Warlock,  ResourceType.Mana, stamina,  strenght,  intelligence,  agility,  armorRating)
         {
         }
 
