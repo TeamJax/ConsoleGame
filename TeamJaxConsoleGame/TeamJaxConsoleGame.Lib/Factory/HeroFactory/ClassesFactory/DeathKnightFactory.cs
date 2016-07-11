@@ -22,10 +22,12 @@ namespace TeamJaxConsoleGame.Lib.Factory.HeroFactory.ClassesFactory
                 HeroConstants.DEATH_KNIGHT_STRENGHT,
                 HeroConstants.DEATH_KNIGHT_INTELLIGENCE,
                 HeroConstants.DEATH_KNIGHT_AGILITY,
-                HeroConstants.DEATH_KNIGHT_ARMOR_RATING);
+                HeroConstants.DEATH_KNIGHT_ARMOR_RATING)
+            {
+                Abilities = DefinedHeroAbilities(),
+                Skills = DefinedHeroSkills()
+            };
 
-            heroToCreate.Abilities = DefinedHeroAbilities();
-            heroToCreate.Skills = DefinedHeroSkills();
 
             return heroToCreate;
         }
@@ -48,7 +50,7 @@ namespace TeamJaxConsoleGame.Lib.Factory.HeroFactory.ClassesFactory
             {
                 new PassiveSkill("Dodge", 20),
                 new PassiveSkill("Parry", 30),
-                new ActiveSkill("Horn Of Winter", 100, 100)
+                new ActiveSkill("Horn Of Winter", 100, 100)            
             };            
         }
     }

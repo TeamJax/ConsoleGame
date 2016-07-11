@@ -1,5 +1,7 @@
 ﻿namespace TeamJaxConsoleGame.Lib.Interfaces
 {
+    using Enumerations;
+
     public interface IFighter : IGameObject
     {
         int Health { get; set; }
@@ -15,5 +17,7 @@
         int Intelligence { get; set; }
 
         int Strenght { get; set; }
+
+        PrimaryHeroStatsType PrimaryStats { get; set; }
     }
 }

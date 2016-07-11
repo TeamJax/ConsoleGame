@@ -1,9 +1,11 @@
-﻿namespace TeamJaxConsoleGame.Lib.Entities
+﻿using TeamJaxConsoleGame.Lib.Enumerations;
+
+namespace TeamJaxConsoleGame.Lib.Entities
 {
     using Common;
     using Constants;
     using Interfaces;
-
+    //todo remove this class and inherit hero
     public class Enemy : ItemHolder, IFighter
     {
         private int agility;
@@ -14,8 +16,7 @@
         private int stamina;
         private int strenght;
 
-        public Enemy(string name, int armorRating, int attackDamage, int health, int agility, int stamina,
-            int strenght, int intelligence)
+        public Enemy(string name, int armorRating, int attackDamage, int health, int agility, int stamina,int strenght, int intelligence)
         {
             this.ArmorRating = armorRating;
             this.Health = health;
@@ -113,5 +114,7 @@
                 this.strenght = value;
             }
         }
+
+        public PrimaryHeroStatsType PrimaryStats { get; set; }
     }
 }

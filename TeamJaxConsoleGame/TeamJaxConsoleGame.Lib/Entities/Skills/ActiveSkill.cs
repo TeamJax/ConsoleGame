@@ -1,9 +1,10 @@
-﻿namespace TeamJaxConsoleGame.Lib.Entities.Skills
+﻿using System;
+
+namespace TeamJaxConsoleGame.Lib.Entities.Skills
 {
-    using System.Collections.Generic; 
-    using System.Linq;
     using Interfaces;
     using Skills.Abstract;
+    using Enumerations;
 
     public class ActiveSkill : Skill, IActivatable, IGameObject
     {
@@ -17,23 +18,25 @@
 
         public void Activate(IFighter target)
         {
-            
+            var primarySkill = target.PrimaryStats;
 
-            //todo get strongest stats and apply to this stats
-           /* switch (this.Type)
+            switch (primarySkill)
             {
-                case ActiveSkillTypes.Haste:
-                    target.Agility += this.Power;
-                    break;
-                case ActiveSkillTypes.Aggression:
+                case PrimaryHeroStatsType.Strength:
                     target.Strenght += this.Power;
                     break;
-                case ActiveSkillTypes.Adrenaline:
+                case PrimaryHeroStatsType.Intelligence:
+                    target.Intelligence += this.Power;
+                    break;
+                case PrimaryHeroStatsType.Agility:
+                    target.Agility += this.Power;
+                    break;
+                case PrimaryHeroStatsType.AttackDamage:
                     target.AttackDamage += this.Power;
                     break;
                 default:
-                    break;
-            }*/
+                    throw new InvalidOperationException();
+            }
         }
     }
 }

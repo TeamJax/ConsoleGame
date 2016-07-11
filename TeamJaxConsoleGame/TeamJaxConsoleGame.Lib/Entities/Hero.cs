@@ -33,15 +33,23 @@
             this.Agility = agility;
             this.ArmorRating = armorRating;
             this.AttackDamage = this.Agility * 2 + this.Strenght;
-            this.resourceCapacity = (int)resource;
-            this.primaryStats = primaryStats;
+            this.ResourceCapacity = (int)resource;
+            this.PrimaryStats = primaryStats;
             this.Skills = new List<ISkill>();
             this.Abilities = new List<IAbility>();
         }
 
+        public IList<ISkill> Skills { get; set; }
+
+        public IList<IAbility> Abilities { get; set; }
+
         public RaceType Race { get; set; }
 
         public HeroType HeroType { get; set; }
+
+        public ResourceType ResourceType { get; set; }
+
+        public PrimaryHeroStatsType PrimaryStats { get; set; }
 
         public int Stamina
         {
@@ -54,23 +62,8 @@
 
                 this.stamina = value;
             }
-        }
-
-        public ResourceType ResourceType { get; set; }
-
-        private int ResourceCapacity
-        {
-            get
-            {
-                return this.resourceCapacity;                
-            }
-
-            set
-            {
-                this.resourceCapacity = value;                
-            }
-        }
-
+        }       
+       
         public int Agility
         {
             get { return this.agility; }
@@ -108,7 +101,7 @@
 
                 this.strenght = value;
             }
-        }
+        }       
 
         public int Health
         {
@@ -149,9 +142,18 @@
             }
         }
 
-        public IList<ISkill> Skills { get; set; }
+        private int ResourceCapacity
+        {
+            get
+            {
+                return this.resourceCapacity;
+            }
 
-        public IList<IAbility> Abilities { get; set; }
+            set
+            {
+                this.resourceCapacity = value;
+            }
+        }
 
         public abstract void UseSpecialAbility();
 
