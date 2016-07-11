@@ -12,7 +12,7 @@
 
         public override void UseSpecialAbility()
         {
-            throw new NotImplementedException();
+            this.Stamina += 50;
         }
     }
 }

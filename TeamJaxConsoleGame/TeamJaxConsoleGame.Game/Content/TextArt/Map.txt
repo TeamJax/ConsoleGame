@@ -1,0 +1,20 @@
++----------------------------------------------------X-------------------+
+|                   XXXX                             X                   |
+|                      XX             1              X                   |
+|                        X                          XX                   |
+|                        XXXX           XXXXX      XX                    |
+|       XXXXXXXXXXX         XXXXXXXXXXXX     XXXXXXX  XXXXXXXXXXXXXXX    |
+|      XX         XX                                XXX             XXX  |
+|      X           X                XXXX           XXX                X  |
+|      XX          X          XXXXXXXX XXX           XX               XX |
+|       X          X         XX          XXXX         XX               X |
+|      XX          X        XX                XXXX     X       4       X |
+|    XXX           X        XXX         3        XXX    X              X |
+|    X      2     X           XX                   XX   X             XX |
+|   X             X           XX      XXXXX         X   X             X  |
+|   X             X           XXXXXXXX     X       XX  XX            XX  |
+|   XX            XX                        XXXXXXX    X            XX   |
+|    XXX          XX                                   X          XXX    |
+|      XXXXXXX   XX                                    X      XXXX       |
+|            XXXXX                                     XXXXXXXX          |
++------------------------------------------------------------------------+

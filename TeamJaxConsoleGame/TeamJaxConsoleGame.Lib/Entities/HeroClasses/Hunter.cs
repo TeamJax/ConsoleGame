@@ -13,7 +13,7 @@
 
         public override void UseSpecialAbility()
         {
-            throw new NotImplementedException();
+            this.Agility += 75;
         }
     }
 }

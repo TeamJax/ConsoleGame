@@ -2,6 +2,7 @@
 {
     using Constants;
     using Entities;
+    using Entities.Abilities;
     using Enumerations;
     using Factory;
     using Factory.GameScreenFactory;
@@ -40,6 +41,13 @@
             var heroCreater = new HeroCreater();
 
             playerHero = heroCreater.CreateHero(userHeroNameInput, selectedHeroRace, selectedHeroType);
+
+            //testint
+
+            playerHero.Abilities.Add(new DamageAbility("test dmg ability", AbilityType.Damage, 1, 5, "Very powerfull ability"));
+            playerHero.Abilities.Add(new HealAbility("test heal abbbb", AbilityType.Heal, 1, 10, "Very weak heal ability"));
+
+            //testing
         }
 
         private static void Play()
@@ -87,6 +95,10 @@
 
                     showInvalidInput = true;
 
+                    if (keyPressed.KeyChar == '2')
+                    {
+                        GameScreen.PrintMap();
+                    }
 
                 } while (!currentScene.ValidateUserInput(keyPressed));
 
