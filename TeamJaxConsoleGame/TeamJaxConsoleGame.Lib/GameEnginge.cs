@@ -52,11 +52,10 @@
 
         private static void Play()
         {
-            GameSceneType selectedSceneType;
             CreateHero();
             var sceneCreater = new SceneCreater();
             InitializeStartingScene(sceneCreater); // new TownSceneFactory(), new TownFactory());
-            selectedSceneType = currentScene.SceneType;
+            var selectedSceneType = currentScene.SceneType;
 
             while (true)
             {
@@ -102,7 +101,9 @@
                 currentScene = sceneCreater.CreateScene(selectedSceneType, playerHero, currentScene.CurrentLocation);
             }
             //TODO:think how to change the locations?
-
+            //TODO:ADD EVENT
+            //TODO: FIX GAMEENGIGE name :D
+            //TODO: EBASI ZMQTA
         }
     }
 }
