@@ -1,12 +1,11 @@
 ﻿namespace TeamJaxConsoleGame.Lib.Entities.HeroClasses
 {
-    using System;
     using Enumerations;
 
     public class Warlock : Hero
     {
         public Warlock(string name, RaceType race, int stamina, int strenght, int intelligence, int agility, int armorRating) 
-            : base(name, race, HeroType.Warlock,  ResourceType.Mana, stamina,  strenght,  intelligence,  agility,  armorRating)
+            : base(name, race, HeroType.Warlock,  ResourceType.Mana, PrimaryHeroStatsType.Intelligence, stamina,  strenght,  intelligence,  agility,  armorRating)
         {
         }
 

@@ -1,12 +1,11 @@
 ﻿namespace TeamJaxConsoleGame.Lib.Entities.HeroClasses
 {
-    using System;
     using Enumerations;
 
     public class Paladin : Hero
     {
         public Paladin(string name, RaceType race, int stamina, int strenght, int intelligence, int agility, int armorRating)
-            : base(name, race, HeroType.Paladin, ResourceType.Mana, stamina, strenght, intelligence, agility, armorRating)
+            : base(name, race, HeroType.Paladin, ResourceType.Mana, PrimaryHeroStatsType.Intelligence, stamina, strenght, intelligence, agility, armorRating)
         {
         }
 

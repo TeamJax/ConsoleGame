@@ -1,4 +1,6 @@
-﻿namespace TeamJaxConsoleGame.Lib.Factory.HeroFactory.ClassesFactory
+﻿using TeamJaxConsoleGame.Lib.Entities.Skills;
+
+namespace TeamJaxConsoleGame.Lib.Factory.HeroFactory.ClassesFactory
 {
     using System.Collections.Generic;
     using Constants;
@@ -33,13 +35,21 @@
             return new List<IAbility>
             {
                 new DamageAbility("Death and Decay", 10, 50),
-                new DamageAbility("Blood Boil", 20, 10)
+                new DamageAbility("Blood Boil", 20, 10),
+                new DamageAbility("Icy Touch", 50, 30),
+                new DamageAbility("Plague Strike", 40, 40),
+                new HealAbility("Dark Simulacrum", 30, 40)
             };
         }
 
         public override IList<ISkill> DefinedHeroSkills()
         {
-            throw new System.NotImplementedException();
+            return new List<ISkill>
+            {
+                new PassiveSkill("Dodge", 20),
+                new PassiveSkill("Parry", 30),
+                new ActiveSkill("Horn Of Winter", 100, 100, ),
+            };            
         }
     }
 }

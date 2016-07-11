@@ -3,7 +3,6 @@
     public enum AbilityType
     {
         Heal,
-        Damage,
-        Mixed
+        Damage
     }
 }

@@ -1,12 +1,11 @@
 ﻿namespace TeamJaxConsoleGame.Lib.Entities.HeroClasses
 {
-    using System;
     using Enumerations;
 
     public class Monk : Hero
     {
         public Monk(string name, RaceType race,  int stamina, int strenght, int intelligence, int agility, int armorRating) 
-            : base(name, race, HeroType.Monk, ResourceType.Mana, stamina, strenght, intelligence, agility, armorRating)
+            : base(name, race, HeroType.Monk, ResourceType.Mana, PrimaryHeroStatsType.Agility, stamina, strenght, intelligence, agility, armorRating)
         {           
         }
 

@@ -8,14 +8,11 @@ namespace TeamJaxConsoleGame.Lib.Entities.Skills.Abstract
     {   
         private int successChance;
 
-        protected Skill(string name, int power, int successChance)
+        protected Skill(string name, int successChance)
             : base(name)
         {
-            this.Power = power;
             this.SuccessChance = successChance;
-        }
-
-        public int Power { get; set; }
+        }    
 
         public int SuccessChance
         {

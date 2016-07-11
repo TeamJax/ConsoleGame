@@ -1,30 +1,26 @@
 ﻿namespace TeamJaxConsoleGame.Lib.Entities.Skills
 {
+    using System.Collections.Generic; 
+    using System.Linq;
     using Interfaces;
-    using Enumerations;
     using Skills.Abstract;
 
-    public class ActiveSkill : Skill, IAbility, IGameObject
+    public class ActiveSkill : Skill, IActivatable, IGameObject
     {
-        public ActiveSkillTypes Type { get; set; }
+        public int Power { get; set; }
 
-        AbilityType IAbility.Type { get; set; }
-
-        public int ResourceCost { get; set; }
-
-        public int AbilityPower { get; set; }
-
-        public string Description { get; set; }
-
-        public ActiveSkill(string name, int power, int successChance, ActiveSkillTypes type)
-            : base(name, power, successChance)
+        public ActiveSkill(string name, int power, int successChance)
+            : base(name, successChance)
         {
-            this.Type = type;
+            this.Power = power;
         }
 
         public void Activate(IFighter target)
         {
-            switch (this.Type)
+            var strongestStats = 
+
+            //todo get strongest stats and apply to this stats
+           /* switch (this.Type)
             {
                 case ActiveSkillTypes.Haste:
                     target.Agility += this.Power;
@@ -37,7 +33,7 @@
                     break;
                 default:
                     break;
-            }
+            }*/
         }
     }
 }

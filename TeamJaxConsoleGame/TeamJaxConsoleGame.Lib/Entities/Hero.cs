@@ -18,8 +18,9 @@
         private RaceType race;
         private ResourceType resource;
         private int resourceCapacity;
+        private PrimaryHeroStatsType primaryStats;
 
-        protected Hero(string name, RaceType race, HeroType type, ResourceType resource, int stamina, int strenght, int intelligence, int agility, int armorRating)
+        protected Hero(string name, RaceType race, HeroType type, ResourceType resource, PrimaryHeroStatsType primaryStats, int stamina, int strenght, int intelligence, int agility, int armorRating)
         {
             this.Name = name;           
             this.Race = race;
@@ -33,6 +34,7 @@
             this.ArmorRating = armorRating;
             this.AttackDamage = this.Agility * 2 + this.Strenght;
             this.resourceCapacity = (int)resource;
+            this.primaryStats = primaryStats;
             this.Skills = new List<ISkill>();
             this.Abilities = new List<IAbility>();
         }
