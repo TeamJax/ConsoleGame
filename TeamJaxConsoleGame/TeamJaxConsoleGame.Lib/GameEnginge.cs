@@ -5,7 +5,7 @@
     using Entities.Abilities;
     using Enumerations;
     using Factory;
-    using Factory.GameScreenFactory;
+    using Factory.GameSceneFactory;
     using Factory.HeroFactory;
     using Scenes;
     using ScreenText;
@@ -94,11 +94,6 @@
                     }
 
                     showInvalidInput = true;
-
-                    if (keyPressed.KeyChar == '2')
-                    {
-                        GameScreen.PrintMap();
-                    }
 
                 } while (!currentScene.ValidateUserInput(keyPressed));
 
