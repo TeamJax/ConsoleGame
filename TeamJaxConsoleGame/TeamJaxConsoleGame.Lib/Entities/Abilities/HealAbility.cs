@@ -2,6 +2,7 @@
 {
     using Enumerations;
     using Interfaces;
+    using Abilities.Abstract;
 
     public class HealAbility : Ability, IGameObject
     {
