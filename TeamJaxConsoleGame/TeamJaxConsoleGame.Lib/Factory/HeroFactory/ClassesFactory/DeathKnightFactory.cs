@@ -1,13 +1,13 @@
-﻿using TeamJaxConsoleGame.Lib.Entities.Abilities;
-
-namespace TeamJaxConsoleGame.Lib.Factory.HeroFactory.ClassesFactory
+﻿namespace TeamJaxConsoleGame.Lib.Factory.HeroFactory.ClassesFactory
 {
     using System.Collections.Generic;
     using Constants;
     using Entities;
+    using Entities.Abilities;
     using Entities.HeroClasses;
     using Enumerations;
     using Interfaces;
+    
 
     public class DeathKnightFactory : HeroFactory
     {
@@ -32,7 +32,8 @@ namespace TeamJaxConsoleGame.Lib.Factory.HeroFactory.ClassesFactory
         {
             return new List<IAbility>
             {
-                new DamageAbility("Death and Decay", )
+                new DamageAbility("Death and Decay", 10, 50),
+                new DamageAbility("Blood Boil", 20, 10)
             };
         }
 

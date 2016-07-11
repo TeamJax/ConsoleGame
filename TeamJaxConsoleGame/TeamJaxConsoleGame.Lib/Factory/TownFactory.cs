@@ -15,7 +15,7 @@
     {
         public override IFighter CreateEnemyEntity()
         {
-            return new Enemy("Town thief", 1, 2, 5);
+            return new Enemy("Town thief", 1, 2, 5,2,2,2,2);
         }
 
         public void CreateTrader()

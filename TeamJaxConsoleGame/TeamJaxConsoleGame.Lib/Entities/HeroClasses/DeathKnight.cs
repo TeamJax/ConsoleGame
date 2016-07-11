@@ -6,7 +6,7 @@
     public class DeathKnight : Hero
     {
         public DeathKnight(string name, RaceType race, int stamina, int strenght, int intelligence, int agility, int armorRating)
-            : base(name, race, HeroType.DeathKnight, stamina, strenght, intelligence, agility, armorRating)
+            : base(name, race, HeroType.DeathKnight, ResourceType.RunicPower, stamina, strenght, intelligence, agility, armorRating)
         {
         }
 

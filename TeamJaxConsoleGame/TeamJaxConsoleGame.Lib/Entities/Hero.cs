@@ -7,8 +7,7 @@
     using Interfaces; 
 
     public abstract class Hero : ItemHolder, IFighter
-    {
-        private RaceType race;
+    {      
         private int stamina;
         private int agility;
         private int intelligence;
@@ -16,12 +15,16 @@
         private int health;
         private int attackDamage;
         private int armorRating;
-              
-        protected Hero(string name, RaceType race, HeroType type, int stamina, int strenght, int intelligence, int agility, int armorRating)
+        private RaceType race;
+        private ResourceType resource;
+        private int resourceCapacity;
+
+        protected Hero(string name, RaceType race, HeroType type, ResourceType resource, int stamina, int strenght, int intelligence, int agility, int armorRating)
         {
             this.Name = name;           
             this.Race = race;
             this.HeroType = type;
+            this.ResourceType = resource;
             this.Stamina = stamina;
             this.Strenght = strenght;
             this.Intelligence = intelligence;
@@ -29,6 +32,7 @@
             this.Agility = agility;
             this.ArmorRating = armorRating;
             this.AttackDamage = this.Agility * 2 + this.Strenght;
+            this.resourceCapacity = (int)resource;
             this.Skills = new List<ISkill>();
             this.Abilities = new List<IAbility>();
         }
@@ -47,6 +51,21 @@
                     "Stamina", ValidatorConstants.MinStatLength, ValidatorConstants.MaxStatLength));
 
                 this.stamina = value;
+            }
+        }
+
+        public ResourceType ResourceType { get; set; }
+
+        private int ResourceCapacity
+        {
+            get
+            {
+                return this.resourceCapacity;                
+            }
+
+            set
+            {
+                this.resourceCapacity = value;                
             }
         }
 

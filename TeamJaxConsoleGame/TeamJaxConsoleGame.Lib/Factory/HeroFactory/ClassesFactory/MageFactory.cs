@@ -4,6 +4,8 @@
     using Entities;
     using Entities.HeroClasses;
     using Enumerations;
+    using System.Collections.Generic;
+    using Interfaces;
 
     public class MageFactory : HeroFactory
     {
@@ -17,6 +19,16 @@
                 HeroConstants.MAGE_INTELLIGENCE,
                 HeroConstants.MAGE_AGILITY,
                 HeroConstants.MAGE_ARMOR_RATING);
+        }
+
+        public override IList<IAbility> DefinedHeroAbilities()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public override IList<ISkill> DefinedHeroSkills()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
