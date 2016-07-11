@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TeamJaxConsoleGame.Lib.Constants;
-using TeamJaxConsoleGame.Lib.Entities;
-using TeamJaxConsoleGame.Lib.Entities.HeroClasses;
-using TeamJaxConsoleGame.Lib.Enumerations;
-
-namespace TeamJaxConsoleGame.Lib.Factory.HeroFactory
+﻿namespace TeamJaxConsoleGame.Lib.Factory.HeroFactory.ClassesFactory
 {
+    using Constants;
+    using Entities;
+    using Entities.HeroClasses;
+    using Enumerations;
+
     public class DeathKnightFactory : HeroFactory
     {
         public override Hero CreateHero(string name, RaceType race)

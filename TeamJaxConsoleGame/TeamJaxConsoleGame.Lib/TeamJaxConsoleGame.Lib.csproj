@@ -80,7 +80,15 @@
     <Compile Include="Factory\GameScreenFactory\InventorySceneFactory.cs" />
     <Compile Include="Factory\GameScreenFactory\SceneCreater.cs" />
     <Compile Include="Factory\GameScreenFactory\TownSceneFactory.cs" />
-    <Compile Include="Factory\HeroFactory\DeathKnightFactory.cs" />
+    <Compile Include="Factory\HeroFactory\ClassesFactory\DeathKnightFactory.cs" />
+    <Compile Include="Factory\HeroFactory\ClassesFactory\HunterFactory.cs" />
+    <Compile Include="Factory\HeroFactory\ClassesFactory\MageFactory.cs" />
+    <Compile Include="Factory\HeroFactory\ClassesFactory\MonkFactory.cs" />
+    <Compile Include="Factory\HeroFactory\ClassesFactory\PaladinFactory.cs" />
+    <Compile Include="Factory\HeroFactory\ClassesFactory\PriestFactory.cs" />
+    <Compile Include="Factory\HeroFactory\ClassesFactory\RogueFactory.cs" />
+    <Compile Include="Factory\HeroFactory\ClassesFactory\WarlockFactory.cs" />
+    <Compile Include="Factory\HeroFactory\ClassesFactory\WarriorFactory.cs" />
     <Compile Include="Factory\HeroFactory\HeroCreater.cs" />
     <Compile Include="Factory\HeroFactory\HeroFactory.cs" />
     <Compile Include="Factory\TownFactory.cs" />
