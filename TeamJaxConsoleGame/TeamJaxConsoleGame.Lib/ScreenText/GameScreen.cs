@@ -80,8 +80,8 @@
             #region PrintLogo
 
             Console.Clear();
-            //PrintLogoAnimated(logo);
-            PrintMap();
+            PrintLogoAnimated(logo);
+            //PrintMap();
 
             #endregion PrintLogo
 
