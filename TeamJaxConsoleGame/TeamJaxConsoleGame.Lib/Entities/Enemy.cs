@@ -14,7 +14,8 @@
         private int stamina;
         private int strenght;
 
-        public Enemy(string name, int armorRating, int attackDamage, int health)
+        public Enemy(string name, int armorRating, int attackDamage, int health, int agility, int stamina,
+            int strenght, int intelligence)
         {
             this.ArmorRating = armorRating;
             this.Health = health;
