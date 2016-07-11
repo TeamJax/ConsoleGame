@@ -21,7 +21,7 @@
 
         public override void UseSpecialAbility()
         {
-            throw new NotImplementedException();
+            this.Strenght += 100;
         }
     }
 }
