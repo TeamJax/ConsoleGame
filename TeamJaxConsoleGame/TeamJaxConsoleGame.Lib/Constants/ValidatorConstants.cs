@@ -8,9 +8,9 @@
 
         internal const string NumbersMustBeBetweenMinAndMax = "{0} must be bettwen {1} and {2}!";
 
-        internal const int MinStatLength = 10;
+        internal const int MinStatLength = 1;
 
-        internal const int MaxStatLength = 10;
+        internal const int MaxStatLength = 1000;
 
     }
 }

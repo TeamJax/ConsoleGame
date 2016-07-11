@@ -17,7 +17,7 @@
 
         public void Activate(IFighter target)
         {
-            var strongestStats = 
+            
 
             //todo get strongest stats and apply to this stats
            /* switch (this.Type)

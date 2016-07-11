@@ -48,7 +48,7 @@ namespace TeamJaxConsoleGame.Lib.Factory.HeroFactory.ClassesFactory
             {
                 new PassiveSkill("Dodge", 20),
                 new PassiveSkill("Parry", 30),
-                new ActiveSkill("Horn Of Winter", 100, 100, ),
+                new ActiveSkill("Horn Of Winter", 100, 100)
             };            
         }
     }
