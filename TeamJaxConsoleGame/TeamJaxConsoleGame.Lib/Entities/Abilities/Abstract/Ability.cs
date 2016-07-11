@@ -1,4 +1,4 @@
-﻿namespace TeamJaxConsoleGame.Lib.Entities.Abilities
+﻿namespace TeamJaxConsoleGame.Lib.Entities.Abilities.Abstract
 {
     using System;
     using Enumerations;
@@ -11,7 +11,7 @@
         private int abilityPower;
         private string description;
 
-        public Ability(string name, AbilityType type, int resourceCost, int abilityPower, string description = null)   
+        protected Ability(string name, AbilityType type, int resourceCost, int abilityPower, string description = null)   
             : base(name)        
         {
             this.Type = type;

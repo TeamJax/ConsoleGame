@@ -1,19 +1,21 @@
-﻿namespace TeamJaxConsoleGame.Lib.Entities.Skills
+﻿using TeamJaxConsoleGame.Lib.Interfaces;
+
+namespace TeamJaxConsoleGame.Lib.Entities.Skills.Abstract
 {
     using System;
 
-    public abstract class Skill : GameObject
+    public abstract class Skill : GameObject, ISkill
     {   
         private int successChance;
 
-        public Skill(string name, int power, int successChance)
+        protected Skill(string name, int power, int successChance)
             : base(name)
         {
             this.Power = power;
             this.SuccessChance = successChance;
         }
 
-        public int Power { get; private set; }
+        public int Power { get; set; }
 
         public int SuccessChance
         {

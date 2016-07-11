@@ -2,6 +2,7 @@
 {
     using Interfaces;
     using Enumerations;
+    using Skills.Abstract;
 
     public class ActiveSkill : Skill, IAbility, IGameObject
     {
