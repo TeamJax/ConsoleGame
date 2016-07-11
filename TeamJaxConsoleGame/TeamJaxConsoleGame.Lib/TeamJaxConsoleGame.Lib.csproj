@@ -40,8 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\Validator.cs" />
     <Compile Include="Constants\HeroConstants.cs" />
     <Compile Include="Constants\LocationConstants.cs" />
+    <Compile Include="Constants\ValidatorConstants.cs" />
     <Compile Include="Entities\Abilities\Abstract\Ability.cs" />
     <Compile Include="Entities\Abilities\DamageAbility.cs" />
     <Compile Include="Entities\Abilities\HealAbility.cs" />
