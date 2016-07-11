@@ -1,10 +1,9 @@
-﻿using System.Collections.Generic;
-using TeamJaxConsoleGame.Lib.Interfaces;
-
-namespace TeamJaxConsoleGame.Lib.Factory.HeroFactory
+﻿namespace TeamJaxConsoleGame.Lib.Factory.HeroFactory
 {
+    using System.Collections.Generic;
     using Entities;
-    using Enumerations;
+    using Enumerations;    
+    using Interfaces;
 
     public abstract class HeroFactory
     {

@@ -1,12 +1,13 @@
-﻿using System.Collections.Generic;
-using TeamJaxConsoleGame.Lib.Interfaces;
+﻿using TeamJaxConsoleGame.Lib.Entities.Abilities;
 
 namespace TeamJaxConsoleGame.Lib.Factory.HeroFactory.ClassesFactory
 {
+    using System.Collections.Generic;
     using Constants;
     using Entities;
     using Entities.HeroClasses;
     using Enumerations;
+    using Interfaces;
 
     public class DeathKnightFactory : HeroFactory
     {
@@ -29,7 +30,10 @@ namespace TeamJaxConsoleGame.Lib.Factory.HeroFactory.ClassesFactory
 
         public override IList<IAbility> DefinedHeroAbilities()
         {
-            throw new System.NotImplementedException();
+            return new List<IAbility>
+            {
+                new DamageAbility("Death and Decay", )
+            };
         }
 
         public override IList<ISkill> DefinedHeroSkills()
