@@ -1,6 +1,5 @@
 ﻿namespace TeamJaxConsoleGame.Lib.Scenes
 {
-    using ScreenText;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -9,17 +8,21 @@
     using TeamJaxConsoleGame.Lib.Entities;
     using TeamJaxConsoleGame.Lib.Enumerations;
 
-    public class TravelScene : GameScene
+    class BattleScene : GameScene
     {
-        public TravelScene(Location currentLocation, Hero hero, GameSceneType sceneType, IDictionary<string, GameSceneType> optionsMenuItems)
+        public BattleScene(
+            Location currentLocation,
+            Hero hero, 
+            GameSceneType sceneType, 
+            IDictionary<string, GameSceneType> optionsMenuItems,
+            IDictionary<string, BattleSceneOptions> battleOptions) 
             : base(currentLocation, hero, sceneType, optionsMenuItems)
         {
         }
 
         public override void DescribeScene()
         {
-            GameScreen.PrintMap();
-            this.WriteOptionsMenu();
+            base.DescribeScene();
         }
     }
 }

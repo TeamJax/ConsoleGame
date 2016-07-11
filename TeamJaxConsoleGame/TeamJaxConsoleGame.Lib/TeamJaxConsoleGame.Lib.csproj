@@ -72,12 +72,14 @@
     <Compile Include="Entities\Skills\PassiveSkill.cs" />
     <Compile Include="Enumerations\AbilityType.cs" />
     <Compile Include="Enumerations\ActiveSkillTypes.cs" />
+    <Compile Include="Enumerations\BattleSceneOptions.cs" />
     <Compile Include="Enumerations\GameSceneType.cs" />
     <Compile Include="Enumerations\HeroType.cs" />
     <Compile Include="Enumerations\ItemType.cs" />
     <Compile Include="Enumerations\RaceType.cs" />
     <Compile Include="Factory\ForestFactory.cs" />
     <Compile Include="Factory\GameFactory.cs" />
+    <Compile Include="Factory\GameSceneFactory\BattleSceneFactory.cs" />
     <Compile Include="Factory\GameSceneFactory\GameSceneFactory.cs" />
     <Compile Include="Factory\GameSceneFactory\InventorySceneFactory.cs" />
     <Compile Include="Factory\GameSceneFactory\SceneCreater.cs" />
@@ -96,6 +98,7 @@
     <Compile Include="Factory\HeroFactory\HeroFactory.cs" />
     <Compile Include="Factory\TownFactory.cs" />
     <Compile Include="GameEnginge.cs" />
+    <Compile Include="Scenes\BattleScene.cs" />
     <Compile Include="Scenes\GameScene.cs" />
     <Compile Include="Interfaces\IAbility.cs" />
     <Compile Include="Interfaces\IFighter.cs" />
