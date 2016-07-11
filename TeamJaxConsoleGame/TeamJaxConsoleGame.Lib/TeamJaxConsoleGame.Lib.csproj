@@ -78,10 +78,11 @@
     <Compile Include="Enumerations\RaceType.cs" />
     <Compile Include="Factory\ForestFactory.cs" />
     <Compile Include="Factory\GameFactory.cs" />
-    <Compile Include="Factory\GameScreenFactory\GameSceneFactory.cs" />
-    <Compile Include="Factory\GameScreenFactory\InventorySceneFactory.cs" />
-    <Compile Include="Factory\GameScreenFactory\SceneCreater.cs" />
-    <Compile Include="Factory\GameScreenFactory\TownSceneFactory.cs" />
+    <Compile Include="Factory\GameSceneFactory\GameSceneFactory.cs" />
+    <Compile Include="Factory\GameSceneFactory\InventorySceneFactory.cs" />
+    <Compile Include="Factory\GameSceneFactory\SceneCreater.cs" />
+    <Compile Include="Factory\GameSceneFactory\TownSceneFactory.cs" />
+    <Compile Include="Factory\GameSceneFactory\TravelSceneFactory.cs" />
     <Compile Include="Factory\HeroFactory\ClassesFactory\DeathKnightFactory.cs" />
     <Compile Include="Factory\HeroFactory\ClassesFactory\HunterFactory.cs" />
     <Compile Include="Factory\HeroFactory\ClassesFactory\MageFactory.cs" />
@@ -114,6 +115,7 @@
     </Compile>
     <Compile Include="Scenes\InventoryScene.cs" />
     <Compile Include="Scenes\TownScene.cs" />
+    <Compile Include="Scenes\TravelScene.cs" />
     <Compile Include="ScreenText\GameScreen.cs" />
   </ItemGroup>
   <ItemGroup>

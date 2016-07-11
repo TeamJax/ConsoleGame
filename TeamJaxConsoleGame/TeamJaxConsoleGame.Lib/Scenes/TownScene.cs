@@ -13,6 +13,7 @@
         public TownScene(Location currentLocation, Hero hero, GameSceneType sceneType, IDictionary<string, GameSceneType> optionsMenuItems)
             : base(currentLocation, hero, sceneType, optionsMenuItems)
         {
+
         }
     }
 }

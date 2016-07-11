@@ -1,4 +1,4 @@
-﻿namespace TeamJaxConsoleGame.Lib.Factory.GameScreenFactory
+﻿namespace TeamJaxConsoleGame.Lib.Factory.GameSceneFactory
 {
     using Entities;
     using Enumerations;
@@ -24,8 +24,9 @@
                 //    break;
                 //case GameSceneType.Shop:
                 //    break;
-                //case GameSceneType.Travel:
-                //    break;
+                case GameSceneType.Travel:
+                    sceneFactory = new TravelSceneFactory();
+                    return sceneFactory.CreateScene(hero, location);
                 default:
                     return null;
             }

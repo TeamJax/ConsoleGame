@@ -1,4 +1,4 @@
-﻿namespace TeamJaxConsoleGame.Lib.Factory.GameScreenFactory
+﻿namespace TeamJaxConsoleGame.Lib.Factory.GameSceneFactory
 {
     using Entities;
     using Scenes;

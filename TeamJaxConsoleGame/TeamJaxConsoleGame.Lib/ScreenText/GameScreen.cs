@@ -141,23 +141,12 @@
         
         public static void PrintMap()
         {
+            Console.Clear();
             List<char> row = new List<char>();
             Console.ForegroundColor = ConsoleColor.Green;
             foreach (var item in Map)
             {
-                if (item == '\n')
-                {
-                    foreach (var symbol in Map)
-                    {
-                        Console.Write(symbol);
-                    }
-                    //Thread.Sleep(sleepdelay);
-                    //row.Clear();
-                }
-                else
-                {
-                    row.Add(item);
-                }
+                Console.Write(item);
             }
         }
     }
