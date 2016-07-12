@@ -80,7 +80,7 @@
             }
         }
 
-        protected void WriteOptionsMenu()
+        protected virtual void WriteOptionsMenu()
         {
             this.OptionsMenuItems.Keys.OrderBy(x => x);
             var output = new StringBuilder();
@@ -94,7 +94,7 @@
             GameScreen.PrintOutput(output.ToString(), this.SceneColor);
         }
 
-        private IDictionary<int, GameSceneType> CreateUserChoiceMenu(IDictionary<string, GameSceneType> optionsMenuItems)
+        protected IDictionary<int, GameSceneType> CreateUserChoiceMenu(IDictionary<string, GameSceneType> optionsMenuItems)
         {
             var userChoices = new SortedDictionary<int, GameSceneType>();
 

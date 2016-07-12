@@ -5,7 +5,7 @@
     using System.Text;
     using Interfaces;
     using Factory.LocationEntitiesFactory;
-
+    using Enumerations;
     /// <summary>
     /// The different locations in the game where the player can travel around
     /// </summary>
@@ -13,17 +13,20 @@
     {
         private GameFactory locationFactory;
         
-        public Location(string name, string description, GameFactory locationFactory)
+        public Location(string name, string description, GameFactory locationFactory, Locations locationType)
         {
             this.LocationDescription = description;
             this.Name = name;
             this.LocationFacotry = locationFactory;
             this.LocationObjects = new List<IGameObject>();
+            this.LocationType = locationType;
         }
-
+        
         public string LocationDescription { get; set; }
         
         public IList<IGameObject> LocationObjects { get; set; }
+
+        public Locations LocationType { get; set; }
 
         public GameFactory LocationFacotry
         {

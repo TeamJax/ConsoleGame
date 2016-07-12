@@ -21,7 +21,16 @@ namespace TeamJaxConsoleGame.Lib.Factory.GameSceneFactory
                 { GameSceneType.Shop.ToString(), GameSceneType.Shop  }
             };
 
-            return new TravelScene(location, hero, GameSceneType.Travel, menuOptions);
+            var locationsValues = Enum.GetValues(typeof(Locations));
+            var filteredLocationsValues = locationsValues.OfType<Locations>().ToList().Where(x => x != location.LocationType);//.ToList().Where().AsQueryable().
+            var travelOptions = new Dictionary<string, Locations>();
+
+            foreach (var filteredLocation in filteredLocationsValues)
+            {
+                travelOptions.Add(filteredLocation.ToString(), filteredLocation);
+            }
+
+            return new TravelScene(location, hero, GameSceneType.Travel, menuOptions, travelOptions);
         }
     }
 }

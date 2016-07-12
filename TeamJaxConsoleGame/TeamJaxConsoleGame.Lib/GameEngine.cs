@@ -26,12 +26,9 @@
 
         protected static void InitializeStartingScene(SceneCreater sceneCreater, LocationCreater locationCreater)
         {
-            //var locationCreater = new LocationCreater();
-            //GameFactory locationFactory = new KalimdorFactory();
-            var startingLocation = locationCreater.CreateLocation(Locations.Kalimdor); // new Location(LocationConstants.INIT_LOCATION_NAME, LocationConstants.INIT_LOCATION_DESCRIPTION, locationFactory);
-
+            var startingLocation = locationCreater.CreateLocation(Locations.Kalimdor);
             startingLocation.LocationObjects.Add(startingLocation.LocationFacotry.CreateEnemyEntity());
-            currentScene = sceneCreater.CreateScene(GameSceneType.Town, playerHero, startingLocation);// sceneFactory.CreateScene(playerHero, startingLocation);
+            currentScene = sceneCreater.CreateScene(GameSceneType.Town, playerHero, startingLocation);
         }
 
         protected static void CreateHero()
@@ -96,10 +93,7 @@
 
                 currentScene = sceneCreater.CreateScene(selectedSceneType, playerHero, currentScene.CurrentLocation);
             }
-            //TODO:think how to change the locations?
             //TODO:ADD EVENT
-            //TODO: FIX GAMEENGIGE name :D
-            //TODO: EBASI ZMQTA
         }
     }
 }
