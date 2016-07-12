@@ -1,17 +1,13 @@
-﻿namespace TeamJaxConsoleGame.Lib.Factory
+﻿namespace TeamJaxConsoleGame.Lib.Factory.LocationEntitiesFactory
 {
-    using Interfaces;
     using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
+    using Interfaces;
     using TeamJaxConsoleGame.Lib.Entities;
 
     /// <summary>
     /// The 'ConcreteFactory1' class
     /// </summary>
-    public class TownFactory : GameFactory
+    public class KalimdorFactory : GameFactory
     {
         public override IFighter CreateEnemyEntity()
         {

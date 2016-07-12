@@ -1,0 +1,564 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TeamJaxConsoleGame.Lib.Common.Validator" Collapsed="true">
+    <Position X="42.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Common\Validator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Constants.HeroConstants" Collapsed="true">
+    <Position X="44" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>GECCDACAIAgIhIDCCBSBTIAAEQAkQQAEAQEQpEAAwAI=</HashCode>
+      <FileName>Constants\HeroConstants.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Constants.ValidatorConstants" Collapsed="true">
+    <Position X="44" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAABAAAAAAEAAAAAAAQAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Constants\ValidatorConstants.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Entities.Abilities.Abstract.Ability" Collapsed="true">
+    <Position X="44" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIIAAAACAgAABAIAAAAAAAAAABAAAAAQAAAAAACAA=</HashCode>
+      <FileName>Entities\Abilities\Abstract\Ability.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Entities.Abilities.DamageAbility" Collapsed="true">
+    <Position X="42.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Abilities\DamageAbility.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Entities.Abilities.HealAbility" Collapsed="true">
+    <Position X="45" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Abilities\HealAbility.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Entities.Enemy" Collapsed="true">
+    <Position X="27" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEKAAABAAAAAQBAAAAEQAIBAAAAAQAAAAAEAAAACg=</HashCode>
+      <FileName>Entities\Enemy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Entities.GameObject" Collapsed="true">
+    <Position X="23.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Entities\GameObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Entities.Hero" Collapsed="true">
+    <Position X="15.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UAAEKUAABAAAACwBAAgIUQAJBAAAAAQAAAAAEIAAACk=</HashCode>
+      <FileName>Entities\Hero.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Entities.ItemHolder" Collapsed="true">
+    <Position X="17" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\ItemHolder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Entities.Item" Collapsed="true">
+    <Position X="33.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgE=</HashCode>
+      <FileName>Entities\Items\Item.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Entities.Location" Collapsed="true">
+    <Position X="40.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAgAAAAAAAAAAAAAAAAEAAAAAAgAE=</HashCode>
+      <FileName>Entities\Location.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Entities.HeroClasses.DeathKnight" Collapsed="true">
+    <Position X="15.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\HeroClasses\DeathKnight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Entities.HeroClasses.Hunter" Collapsed="true">
+    <Position X="18" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\HeroClasses\Hunter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Entities.HeroClasses.Mage" Collapsed="true">
+    <Position X="20.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\HeroClasses\Mage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Entities.HeroClasses.Monk" Collapsed="true">
+    <Position X="22.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\HeroClasses\Monk.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Entities.HeroClasses.Paladin" Collapsed="true">
+    <Position X="24.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\HeroClasses\Paladin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Entities.HeroClasses.Priest" Collapsed="true">
+    <Position X="6.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\HeroClasses\Priest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Entities.HeroClasses.Rogue" Collapsed="true">
+    <Position X="9" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\HeroClasses\Rogue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Entities.HeroClasses.Warlock" Collapsed="true">
+    <Position X="11.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\HeroClasses\Warlock.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Entities.HeroClasses.Warrior" Collapsed="true">
+    <Position X="13.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\HeroClasses\Warrior.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Entities.Items.Knife" Collapsed="true">
+    <Position X="29.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Items\Knife.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Entities.Items.Pot" Collapsed="true">
+    <Position X="31.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Items\Pot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Entities.Items.Shield" Collapsed="true">
+    <Position X="33.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Entities\Items\Shield.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Entities.Items.Stick" Collapsed="true">
+    <Position X="36" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Entities\Items\Stick.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Entities.Items.Sword" Collapsed="true">
+    <Position X="38.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Items\Sword.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Entities.Skills.Abstract.Skill" Collapsed="true">
+    <Position X="3.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAEIAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Skills\Abstract\Skill.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Entities.Skills.ActiveSkill" Collapsed="true">
+    <Position X="2.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Skills\ActiveSkill.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Entities.Skills.PassiveSkill" Collapsed="true">
+    <Position X="4.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Skills\PassiveSkill.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Factory.GameSceneFactory.BattleSceneFactory" Collapsed="true">
+    <Position X="30.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Factory\GameSceneFactory\BattleSceneFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Factory.GameSceneFactory.GameSceneFactory" Collapsed="true">
+    <Position X="31.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Factory\GameSceneFactory\GameSceneFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Factory.GameSceneFactory.InventorySceneFactory" Collapsed="true">
+    <Position X="32.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Factory\GameSceneFactory\InventorySceneFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Factory.GameSceneFactory.SceneCreater" Collapsed="true">
+    <Position X="38.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Factory\GameSceneFactory\SceneCreater.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Factory.GameSceneFactory.TownSceneFactory" Collapsed="true">
+    <Position X="35" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Factory\GameSceneFactory\TownSceneFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Factory.GameSceneFactory.TravelSceneFactory" Collapsed="true">
+    <Position X="28.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Factory\GameSceneFactory\TravelSceneFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Factory.HeroFactory.ClassesFactory.DeathKnightFactory" Collapsed="true">
+    <Position X="5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAgBAAAAAAAAAAA=</HashCode>
+      <FileName>Factory\HeroFactory\ClassesFactory\DeathKnightFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Factory.HeroFactory.ClassesFactory.HunterFactory" Collapsed="true">
+    <Position X="7.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAgBAAAAAAAAAAA=</HashCode>
+      <FileName>Factory\HeroFactory\ClassesFactory\HunterFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Factory.HeroFactory.ClassesFactory.MageFactory" Collapsed="true">
+    <Position X="9.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAgBAAAAAAAAAAA=</HashCode>
+      <FileName>Factory\HeroFactory\ClassesFactory\MageFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Factory.HeroFactory.ClassesFactory.MonkFactory" Collapsed="true">
+    <Position X="11.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAgBAAAAAAAAAAA=</HashCode>
+      <FileName>Factory\HeroFactory\ClassesFactory\MonkFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Factory.HeroFactory.ClassesFactory.PaladinFactory" Collapsed="true">
+    <Position X="14" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAgBAAAAAAAAAAA=</HashCode>
+      <FileName>Factory\HeroFactory\ClassesFactory\PaladinFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Factory.HeroFactory.ClassesFactory.PriestFactory" Collapsed="true">
+    <Position X="16.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAgBAAAAAAAAAAA=</HashCode>
+      <FileName>Factory\HeroFactory\ClassesFactory\PriestFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Factory.HeroFactory.ClassesFactory.RogueFactory" Collapsed="true">
+    <Position X="18.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAgBAAAAAAAAAAA=</HashCode>
+      <FileName>Factory\HeroFactory\ClassesFactory\RogueFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Factory.HeroFactory.ClassesFactory.WarlockFactory" Collapsed="true">
+    <Position X="20.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAgBAAAAAAAAAAA=</HashCode>
+      <FileName>Factory\HeroFactory\ClassesFactory\WarlockFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Factory.HeroFactory.ClassesFactory.WarriorFactory" Collapsed="true">
+    <Position X="2.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAgBAAAAAAAAAAA=</HashCode>
+      <FileName>Factory\HeroFactory\ClassesFactory\WarriorFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Factory.HeroFactory.HeroCreater" Collapsed="true">
+    <Position X="38.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factory\HeroFactory\HeroCreater.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Factory.HeroFactory.HeroFactory" Collapsed="true">
+    <Position X="14.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAgBAAAAAAAAAAA=</HashCode>
+      <FileName>Factory\HeroFactory\HeroFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Factory.LocationEntitiesFactory.EasternKingdomsFactory" Collapsed="true">
+    <Position X="17.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factory\LocationEntitiesFactory\EasternKingdomsFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Factory.LocationEntitiesFactory.GameFactory" Collapsed="true">
+    <Position X="20.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factory\LocationEntitiesFactory\GameFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Factory.LocationEntitiesFactory.KalimdorFactory" Collapsed="true">
+    <Position X="19.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Factory\LocationEntitiesFactory\KalimdorFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Factory.LocationEntitiesFactory.NorthrendFactory" Collapsed="true">
+    <Position X="22" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factory\LocationEntitiesFactory\NorthrendFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Factory.LocationEntitiesFactory.PandariaFactory" Collapsed="true">
+    <Position X="24.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Factory\LocationEntitiesFactory\PandariaFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Factory.LocationFactory.LocationCreater" Collapsed="true">
+    <Position X="42.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factory\LocationFactory\LocationCreater.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.GameEngine" Collapsed="true">
+    <Position X="38.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAGAAQAgAAAEAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>GameEngine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Resources.GameScreenResources" Collapsed="true">
+    <Position X="42.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ASAAAAAABAAAAABAAACBEAAAAQABAAAAgAQAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Resources.LocationResources" Collapsed="true">
+    <Position X="44" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAABEAAgARAAAAABAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Resources.TownOptionsMenu" Collapsed="true">
+    <Position X="40.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Scenes.BattleScene" Collapsed="true">
+    <Position X="28" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Scenes\BattleScene.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Scenes.GameScene" Collapsed="true">
+    <Position X="31.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAMAAAAAQAAABEAAABQAkAAAAAAAAAFQAAAAAAAAA=</HashCode>
+      <FileName>Scenes\GameScene.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Scenes.InventoryScene" Collapsed="true">
+    <Position X="30.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Scenes\InventoryScene.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Scenes.TownScene" Collapsed="true">
+    <Position X="32.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Scenes\TownScene.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.Scenes.TravelScene" Collapsed="true">
+    <Position X="34.75" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Scenes\TravelScene.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamJaxConsoleGame.Lib.ScreenText.GameScreen" Collapsed="true">
+    <Position X="40.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAUAAAAAABEAAAAAAAAAAAAAAAEAAAAAgAAAAAQAABE=</HashCode>
+      <FileName>ScreenText\GameScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="TeamJaxConsoleGame.Lib.Interfaces.IAbility" Collapsed="true">
+    <Position X="6.75" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAACAgAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IAbility.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TeamJaxConsoleGame.Lib.Interfaces.IActivatable" Collapsed="true">
+    <Position X="2.75" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IActivatable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TeamJaxConsoleGame.Lib.Interfaces.IFighter" Collapsed="true">
+    <Position X="5.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAECAAAAAAAAAQBAAAAAAAIAAAAAAQAAAAAEAAAACA=</HashCode>
+      <FileName>Interfaces\IFighter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TeamJaxConsoleGame.Lib.Interfaces.IGameObject" Collapsed="true">
+    <Position X="6.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Interfaces\IGameObject.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TeamJaxConsoleGame.Lib.Interfaces.IItem" Collapsed="true">
+    <Position X="8" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Interfaces\IItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TeamJaxConsoleGame.Lib.Interfaces.IMerchant" Collapsed="true">
+    <Position X="10.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IMerchant.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TeamJaxConsoleGame.Lib.Interfaces.ISkill" Collapsed="true">
+    <Position X="12.5" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\ISkill.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="TeamJaxConsoleGame.Lib.Enumerations.AbilityType" Collapsed="true">
+    <Position X="38.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enumerations\AbilityType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TeamJaxConsoleGame.Lib.Enumerations.ActiveSkillTypes" Collapsed="true">
+    <Position X="40.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Enumerations\ActiveSkillTypes.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TeamJaxConsoleGame.Lib.Enumerations.BattleSceneOptions" Collapsed="true">
+    <Position X="42.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAQAAAAAACAAAAAAAAAAAAIAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Enumerations\BattleSceneOptions.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TeamJaxConsoleGame.Lib.Enumerations.GameSceneType" Collapsed="true">
+    <Position X="44" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAgAAAAAAAAAACAAAAACAAACAAAAAAAAAAQA=</HashCode>
+      <FileName>Enumerations\GameSceneType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TeamJaxConsoleGame.Lib.Enumerations.HeroType" Collapsed="true">
+    <Position X="38.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAIAAAAAAAADAAEAAAAEAAAAAUAAAAAAIAAAA=</HashCode>
+      <FileName>Enumerations\HeroType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TeamJaxConsoleGame.Lib.Enumerations.ItemType" Collapsed="true">
+    <Position X="40.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAQAAAAAAABAgACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enumerations\ItemType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TeamJaxConsoleGame.Lib.Enumerations.Locations" Collapsed="true">
+    <Position X="42.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIQAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Enumerations\Locations.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TeamJaxConsoleGame.Lib.Enumerations.PrimaryHeroStatsType" Collapsed="true">
+    <Position X="44" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAAAAAAAABAAAAAAAAAEAAAACA=</HashCode>
+      <FileName>Enumerations\PrimaryHeroStatsType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TeamJaxConsoleGame.Lib.Enumerations.RaceType" Collapsed="true">
+    <Position X="38.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAAAAQAAAAEBAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Enumerations\RaceType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TeamJaxConsoleGame.Lib.Enumerations.ResourceType" Collapsed="true">
+    <Position X="40.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAEAAAAAAAAAIAAAAAAIAAAAAA=</HashCode>
+      <FileName>Enumerations\ResourceType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

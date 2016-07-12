@@ -1,16 +1,17 @@
 ﻿namespace TeamJaxConsoleGame.Lib
 {
+    using System;
+
     using Constants;
     using Entities;
     using Entities.Items;
     using Enumerations;
-    using Factory;
     using Factory.GameSceneFactory;
     using Factory.HeroFactory;
+    using Factory.LocationEntitiesFactory;
     using Scenes;
     using ScreenText;
-    using System;
-
+    using Factory.LocationFactory;
     public abstract class GameEngine
     {
         private static Hero playerHero;
@@ -23,13 +24,11 @@
             Play();
         }
 
-        protected static void InitializeStartingScene(SceneCreater sceneCreater)
+        protected static void InitializeStartingScene(SceneCreater sceneCreater, LocationCreater locationCreater)
         {
-            GameFactory locationFactory = new TownFactory();
-            var startingLocation = new Location(LocationConstants.INIT_LOCATION_NAME, LocationConstants.INIT_LOCATION_DESCRIPTION, locationFactory);
-
+            var startingLocation = locationCreater.CreateLocation(Locations.Kalimdor);
             startingLocation.LocationObjects.Add(startingLocation.LocationFacotry.CreateEnemyEntity());
-            currentScene = sceneCreater.CreateScene(GameSceneType.Town, playerHero, startingLocation);// sceneFactory.CreateScene(playerHero, startingLocation);
+            currentScene = sceneCreater.CreateScene(GameSceneType.Town, playerHero, startingLocation);
         }
 
         protected static void CreateHero()
@@ -48,7 +47,8 @@
         {
             CreateHero();
             var sceneCreater = new SceneCreater();
-            InitializeStartingScene(sceneCreater);
+            var locationCreater = new LocationCreater();
+            InitializeStartingScene(sceneCreater, locationCreater);
             var selectedSceneType = currentScene.SceneType;
 
             while (true)
@@ -93,10 +93,7 @@
 
                 currentScene = sceneCreater.CreateScene(selectedSceneType, playerHero, currentScene.CurrentLocation);
             }
-            //TODO:think how to change the locations?
             //TODO:ADD EVENT
-            //TODO: FIX GAMEENGIGE name :D
-            //TODO: EBASI ZMQTA
         }
     }
 }
