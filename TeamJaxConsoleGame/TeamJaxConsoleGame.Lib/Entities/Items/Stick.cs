@@ -1,12 +1,14 @@
 ﻿using TeamJaxConsoleGame.Lib.Enumerations;
+using TeamJaxConsoleGame.Lib.Interfaces;
 
 
 namespace TeamJaxConsoleGame.Lib.Entities.Items
 {
-    public class Stick : Item
+    public class Stick : Item, IAttackItem
     {
+        private const int stickDamage = 5;
 
-        public Stick(string name, int price, int stickDamage)
+        public Stick(string name, int price)
             : base(name, price, ItemType.Stick)
         {
             this.Damage = stickDamage;

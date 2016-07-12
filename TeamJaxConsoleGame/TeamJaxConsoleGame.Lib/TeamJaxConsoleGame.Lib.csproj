@@ -62,6 +62,9 @@
     <Compile Include="Factory\LocationEntitiesFactory\EasternKingdomsFactory.cs" />
     <Compile Include="Factory\LocationEntitiesFactory\PandariaFactory.cs" />
     <Compile Include="Factory\LocationFactory\LocationCreater.cs" />
+    <Compile Include="Interfaces\IAttackItem.cs" />
+    <Compile Include="Interfaces\IDefenseItem.cs" />
+    <Compile Include="Interfaces\IHealingItem.cs" />
     <Compile Include="Interfaces\IItem.cs" />
     <Compile Include="Entities\Items\Item.cs" />
     <Compile Include="Entities\Items\Knife.cs" />
@@ -133,7 +136,9 @@
     <Compile Include="Scenes\TravelScene.cs" />
     <Compile Include="ScreenText\GameScreen.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="ExtensionMethods\" />
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\GameScreenResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
