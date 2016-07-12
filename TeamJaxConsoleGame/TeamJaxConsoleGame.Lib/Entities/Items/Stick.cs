@@ -1,22 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TeamJaxConsoleGame.Lib.Constants;
-using TeamJaxConsoleGame.Lib.Enumerations;
+﻿using TeamJaxConsoleGame.Lib.Enumerations;
 
 
 namespace TeamJaxConsoleGame.Lib.Entities.Items
 {
-    class Stick : Item
+    public class Stick : Item
     {
-        public const int stickDamage = 5;
 
-        public Stick(string name, int price)
+        public Stick(string name, int price, int stickDamage)
             : base(name, price, ItemType.Stick)
         {
+            this.Damage = stickDamage;
         }
 
+        public int Damage { get; set; }
+
+        public override string GiveDescription()
+        {
+            return string.Format("{0} and does {1} damage", base.GiveDescription(), this.Damage);
+        }
     }
 }

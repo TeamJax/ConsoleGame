@@ -2,7 +2,7 @@
 {
     using Enumerations;
 
-    public interface IAbility : IActivatable
+    public interface IAbility : IGameObject, IActivatable
     {
         AbilityType Type { get; set; }
 

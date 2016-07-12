@@ -61,6 +61,24 @@ namespace TeamJaxConsoleGame.Lib.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Your abilities:.
+        /// </summary>
+        internal static string AbilitiesDescription {
+            get {
+                return ResourceManager.GetString("AbilitiesDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to *===========================================*.
+        /// </summary>
+        internal static string BreakRow {
+            get {
+                return ResourceManager.GetString("BreakRow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Choose hero&apos;s class.
         /// </summary>
         internal static string ClassChoice {
@@ -72,9 +90,18 @@ namespace TeamJaxConsoleGame.Lib.Resources {
         /// <summary>
         ///   Looks up a localized string similar to This is your inventory.
         /// </summary>
-        internal static string InvetoryDescription {
+        internal static string InventoryDescription {
             get {
-                return ResourceManager.GetString("InvetoryDescription", resourceCulture);
+                return ResourceManager.GetString("InventoryDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your items:.
+        /// </summary>
+        internal static string ItemsDesciption {
+            get {
+                return ResourceManager.GetString("ItemsDesciption", resourceCulture);
             }
         }
         
@@ -93,6 +120,15 @@ namespace TeamJaxConsoleGame.Lib.Resources {
         internal static string RaceChoice {
             get {
                 return ResourceManager.GetString("RaceChoice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your skills:.
+        /// </summary>
+        internal static string SkillsDescription {
+            get {
+                return ResourceManager.GetString("SkillsDescription", resourceCulture);
             }
         }
     }

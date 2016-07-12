@@ -2,6 +2,7 @@
 {
     using Constants;
     using Entities;
+    using Entities.Items;
     using Enumerations;
     using Factory;
     using Factory.GameSceneFactory;
@@ -40,6 +41,7 @@
             var heroCreater = new HeroCreater();
 
             playerHero = heroCreater.CreateHero(userHeroNameInput, selectedHeroRace, selectedHeroType);
+            playerHero.Items.Add(new Stick("Starting Toqga", 0, 10));
         }
 
         private static void Play()

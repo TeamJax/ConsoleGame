@@ -20,6 +20,7 @@
         private int resourceCapacity;
         private PrimaryHeroStatsType primaryStats;
 
+        //TODO: Add experience
         protected Hero(string name, RaceType race, HeroType type, ResourceType resource, PrimaryHeroStatsType primaryStats, int stamina, int strenght, int intelligence, int agility, int armorRating)
         {
             this.Name = name;           
@@ -37,6 +38,7 @@
             this.PrimaryStats = primaryStats;
             this.Skills = new List<ISkill>();
             this.Abilities = new List<IAbility>();
+            this.Items = new List<IItem>();
         }
 
         public IList<ISkill> Skills { get; set; }

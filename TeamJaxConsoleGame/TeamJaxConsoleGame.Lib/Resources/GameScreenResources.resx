@@ -117,16 +117,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AbilitiesDescription" xml:space="preserve">
+    <value>Your abilities:</value>
+  </data>
+  <data name="BreakRow" xml:space="preserve">
+    <value>*===========================================*</value>
+  </data>
   <data name="ClassChoice" xml:space="preserve">
     <value>Choose hero's class</value>
   </data>
-  <data name="InvetoryDescription" xml:space="preserve">
+  <data name="InventoryDescription" xml:space="preserve">
     <value>This is your inventory</value>
+  </data>
+  <data name="ItemsDesciption" xml:space="preserve">
+    <value>Your items:</value>
   </data>
   <data name="LoadHearoCreation" xml:space="preserve">
     <value>Enter your hero's name</value>
   </data>
   <data name="RaceChoice" xml:space="preserve">
     <value>Choose hero's race</value>
+  </data>
+  <data name="SkillsDescription" xml:space="preserve">
+    <value>Your skills:</value>
   </data>
 </root>

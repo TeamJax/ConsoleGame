@@ -2,8 +2,10 @@
 {
     using System.Collections.Generic;
 
+    using Interfaces;
+
     public abstract class ItemHolder : GameObject
     {
-        public IEnumerable<Item> Items { get; set; }
+        public IList<IItem> Items { get; set; }
     }
 }
