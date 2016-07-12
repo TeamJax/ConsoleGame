@@ -26,7 +26,6 @@
                 Skills = DefinedHeroSkills()
             };
 
-
             return heroToCreate;
         }
 

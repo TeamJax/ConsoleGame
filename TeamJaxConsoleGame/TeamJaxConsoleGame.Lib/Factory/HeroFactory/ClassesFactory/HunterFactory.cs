@@ -27,7 +27,6 @@
                 Skills = this.DefinedHeroSkills()
             };
 
-
             return heroToCreate;
         }
 
