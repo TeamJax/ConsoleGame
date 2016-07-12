@@ -3,11 +3,12 @@
     using System.Collections.Generic;
     using Constants;
     using Entities;
+    using Entities.Abilities;
     using Entities.HeroClasses;
+    using Entities.Items; 
+    using Entities.Skills;
     using Enumerations;
     using Interfaces;
-    using Entities.Abilities;
-    using Entities.Skills;
 
     public class PaladinFactory : HeroFactory
     {
@@ -23,7 +24,8 @@
                 HeroConstants.PALADING_ARMOR_RATING)
             {
                 Abilities = DefinedHeroAbilities(),
-                Skills = DefinedHeroSkills()
+                Skills = DefinedHeroSkills(),
+                Items = Items()
             };
         }
 
@@ -44,6 +46,15 @@
             {
                 new PassiveSkill("Righteous Fury", 20, "Increases your threat generation while active, making you a more effective tank."),
                 new ActiveSkill("Blessing of Might", 15, 20, " Places a Blessing on the friendly target, increasing stats by 50.")
+            };
+        }
+
+        protected override IList<IItem> Items()
+        {
+            return new List<IItem>
+            {
+                new Shield("Dragonwrath", 5),
+                new Sword("Thunderstomp", 150)
             };
         }
     }

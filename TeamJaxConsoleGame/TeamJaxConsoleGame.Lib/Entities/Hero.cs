@@ -53,6 +53,8 @@
 
         public PrimaryHeroStatsType PrimaryStats { get; set; }
 
+        public IList<IItem> Items { get; set; }
+
         public int Stamina
         {
             get { return this.stamina; }
