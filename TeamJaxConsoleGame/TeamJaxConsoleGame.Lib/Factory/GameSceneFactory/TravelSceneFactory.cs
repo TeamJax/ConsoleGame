@@ -22,6 +22,7 @@ namespace TeamJaxConsoleGame.Lib.Factory.GameSceneFactory
             };
 
             var locationsValues = Enum.GetValues(typeof(Locations));
+            //LINQU
             var filteredLocationsValues = locationsValues.OfType<Locations>().ToList().Where(x => x != location.LocationType);//.ToList().Where().AsQueryable().
             var travelOptions = new Dictionary<string, Locations>();
 

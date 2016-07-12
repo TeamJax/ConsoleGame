@@ -13,7 +13,7 @@
         private static int sleepdelay = 50;
             //TODO: move to GameScreenConstants
         private static string logo = File.ReadAllText(@"..\..\Content\TextArt\logo.txt");
-        private static string Map = File.ReadAllText(@"..\..\Content\TextArt\map.txt");
+        private static string Map = File.ReadAllText(@"..\..\Content\TextArt\MapBigger.txt");
 
         public static void SetScreen()
         {
