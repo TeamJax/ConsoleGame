@@ -1,10 +1,8 @@
-﻿using System;
-using TeamJaxConsoleGame.Lib.Enumerations;
-using TeamJaxConsoleGame.Lib.Interfaces;
-
-
-namespace TeamJaxConsoleGame.Lib.Entities.Items
+﻿namespace TeamJaxConsoleGame.Lib.Entities.Items
 {
+    using Enumerations;
+    using Interfaces;
+
     public class Knife : Item, IAttackItem
     {
         private const int knifeDamage = 20;

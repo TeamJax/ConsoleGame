@@ -8,7 +8,7 @@
         public int Price { get; protected set; }
         public ItemType ItemType { get; set; }
 
-        public Item(string name, int price, ItemType itemType) :
+        protected Item(string name, int price, ItemType itemType) :
             base(name)
         {
             this.Price = price;

@@ -1,9 +1,8 @@
-﻿using TeamJaxConsoleGame.Lib.Enumerations;
-using TeamJaxConsoleGame.Lib.Interfaces;
-
-
-namespace TeamJaxConsoleGame.Lib.Entities.Items
+﻿namespace TeamJaxConsoleGame.Lib.Entities.Items
 {
+    using Enumerations;
+    using Interfaces;
+
     public class Stick : Item, IAttackItem
     {
         private const int stickDamage = 5;

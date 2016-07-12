@@ -1,11 +1,9 @@
-﻿using System;
-using TeamJaxConsoleGame.Lib.Enumerations;
-using TeamJaxConsoleGame.Lib.Interfaces;
-
-
-namespace TeamJaxConsoleGame.Lib.Entities.Items
+﻿namespace TeamJaxConsoleGame.Lib.Entities.Items
 {
-    class Shield : Item, IAttackItem, IDefenseItem
+    using Enumerations;
+    using Interfaces;
+
+    public class Shield : Item, IAttackItem, IDefenseItem
     {
         private const int shieldDamage = 5;
         private const int shieldProtection = 30;

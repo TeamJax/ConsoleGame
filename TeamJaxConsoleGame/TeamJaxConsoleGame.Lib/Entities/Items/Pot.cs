@@ -1,11 +1,9 @@
-﻿using System;
-using TeamJaxConsoleGame.Lib.Enumerations;
-using TeamJaxConsoleGame.Lib.Interfaces;
-
-
-namespace TeamJaxConsoleGame.Lib.Entities.Items
+﻿namespace TeamJaxConsoleGame.Lib.Entities.Items
 {
-    class Pot : Item, IHealingItem
+    using Enumerations;
+    using Interfaces;
+
+    public class Pot : Item, IHealingItem
     {
         private const int potHealing = 30;
 
