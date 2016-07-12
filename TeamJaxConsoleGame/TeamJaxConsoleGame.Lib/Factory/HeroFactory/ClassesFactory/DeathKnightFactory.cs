@@ -5,7 +5,8 @@
     using Entities;
     using Entities.Abilities;
     using Entities.HeroClasses;
-    using Entities.Skills;
+    using Entities.Items;
+    using Entities.Skills;    
     using Enumerations;
     using Interfaces;
   
@@ -23,7 +24,8 @@
                 HeroConstants.DEATH_KNIGHT_ARMOR_RATING)
             {
                 Abilities = DefinedHeroAbilities(),
-                Skills = DefinedHeroSkills()
+                Skills = DefinedHeroSkills(),
+                Items = Items()
             };
 
             return heroToCreate;
@@ -50,6 +52,16 @@
                 new ActiveSkill("Horn Of Winter", 100, 100, "Temporary increases death knight primary stats"),
                 new ActiveSkill("Frost Presence", 5, 100, "Increases all of the death knight's stats by a small amount while active")           
             };            
+        }
+
+        protected override IList<IItem> Items()
+        {
+            return new List<IItem>
+            {
+               new Sword("Thunderfury", 200),
+               new Pot("Healing Pot", 5),
+               new Pot("Strength elixir", 5)
+            };
         }
     }
 }

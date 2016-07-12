@@ -3,11 +3,12 @@
     using System.Collections.Generic;
     using Constants;
     using Entities;
+    using Entities.Abilities;
     using Entities.HeroClasses;
+    using Entities.Items;    
+    using Entities.Skills;
     using Enumerations;
     using Interfaces;
-    using Entities.Abilities;
-    using Entities.Skills;
 
     public class PriestFactory : HeroFactory
     {
@@ -23,7 +24,8 @@
                 HeroConstants.PRIEST_ARMOR_RATING)
             {
                 Abilities = DefinedHeroAbilities(),
-                Skills = DefinedHeroSkills()
+                Skills = DefinedHeroSkills(),
+                Items = Items()
             };
         }
 
@@ -46,6 +48,14 @@
                 new ActiveSkill("Power Word: Fortitude", 5, 30, "Infuses the target with vitality, increasing Stamina by 10% for 1 hour.")
 
             };
+        }
+
+        protected override IList<IItem> Items()
+        {
+           return new List<IItem>
+           {
+               new Stick("Stick of Truth", 600)
+           };
         }
     }
 }

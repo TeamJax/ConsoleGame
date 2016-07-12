@@ -1,13 +1,14 @@
 ﻿namespace TeamJaxConsoleGame.Lib.Factory.HeroFactory.ClassesFactory
 {
+    using System.Collections.Generic;
     using Constants;
     using Entities;
     using Entities.HeroClasses;
-    using Enumerations;
-    using System.Collections.Generic;
-    using Interfaces;
+    using Entities.Items;
     using Entities.Abilities;
     using Entities.Skills;
+    using Enumerations;
+    using Interfaces;
 
     public class MonkFactory : HeroFactory
     {
@@ -23,7 +24,8 @@
                 HeroConstants.MONK_ARMOR_RATING)
             {
                 Abilities = DefinedHeroAbilities(),
-                Skills = DefinedHeroSkills()
+                Skills = DefinedHeroSkills(),
+                Items = Items()
             };
         }
 
@@ -44,6 +46,15 @@
             {
                 new PassiveSkill("Stance of the Fierce Tiger", 30, "Grants you and your allies within 10 yards 10% increased movement speed!"),
                 new ActiveSkill("Fortifying Brew", 20, 25, "Reduces damage taken and increases maximum health by 20% for 15 seconds!")
+            };
+        }
+
+        protected override IList<IItem> Items()
+        {
+            return new List<IItem>
+            {
+                new Stick("Exceptional stick", 40),
+                new Pot("Healing pot", 5)
             };
         }
     }

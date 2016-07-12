@@ -3,11 +3,12 @@
     using System.Collections.Generic;
     using Constants;
     using Entities;
-    using Entities.HeroClasses;
+    using Entities.Abilities;
+    using Entities.HeroClasses;      
+    using Entities.Skills;
+    using Entities.Items;
     using Enumerations;
     using Interfaces;
-    using Entities.Abilities;
-    using Entities.Skills;
 
     public class WarriorFactory : HeroFactory
     {
@@ -23,7 +24,8 @@
                 HeroConstants.WARRIROR_ARMOR_RATING)
             {
                 Abilities = DefinedHeroAbilities(),
-                Skills = DefinedHeroSkills()
+                Skills = DefinedHeroSkills(),
+                Items = Items()
             };
         }
 
@@ -44,6 +46,15 @@
             {
                 new PassiveSkill("Battle Shout", 15, "Increases the stats of all raid and party members!"),
                 new ActiveSkill("BloodThirst", 10, 25, "Instantly strike the target for Physical damage")
+            };
+        }
+
+        protected override IList<IItem> Items()
+        {
+            return new List<IItem>
+            {
+                new Sword("Thunderfury", 100),
+                new Shield("Black Death", 50)
             };
         }
     }

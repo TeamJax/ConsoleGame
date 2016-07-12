@@ -1,12 +1,13 @@
 ﻿namespace TeamJaxConsoleGame.Lib.Factory.HeroFactory.ClassesFactory
 {
+    using System.Collections.Generic;
     using Constants;
     using Entities;
     using Entities.Abilities;
     using Entities.HeroClasses;
+    using Entities.Items;
     using Entities.Skills;
     using Enumerations;
-    using System.Collections.Generic;
     using Interfaces;
     
     public class HunterFactory : HeroFactory
@@ -24,7 +25,8 @@
                 )
             {
                 Abilities = this.DefinedHeroAbilities(),
-                Skills = this.DefinedHeroSkills()
+                Skills = this.DefinedHeroSkills(),
+                Items = Items()
             };
 
             return heroToCreate;
@@ -47,6 +49,14 @@
             {
                 new PassiveSkill("Deterrence", 10, "Hunter has a 10% chacne to deflect incoming attacks"),
                 new ActiveSkill("Trueshot Aura", 100, 10, "Increases hunter attack damage by 10%")
+            };
+        }
+
+        protected override IList<IItem> Items()
+        {
+            return new List<IItem>
+            {
+                new Knife("Stiffing dagger", 30)
             };
         }
     }

@@ -1,13 +1,14 @@
 ﻿namespace TeamJaxConsoleGame.Lib.Factory.HeroFactory.ClassesFactory
 {
-    using Constants;
-    using Entities;
-    using Entities.HeroClasses;
-    using Enumerations;
     using System.Collections.Generic;
-    using Interfaces;
+    using Constants;
+    using Entities;    
     using Entities.Abilities;
+    using Entities.HeroClasses;
     using Entities.Skills;
+    using Entities.Items;
+    using Enumerations;
+    using Interfaces;
 
     public class WarlockFactory : HeroFactory
     {
@@ -23,7 +24,8 @@
                 HeroConstants.WARLOCK_ARMOR_RATING)
             {
                 Abilities = DefinedHeroAbilities(),
-                Skills = DefinedHeroSkills()
+                Skills = DefinedHeroSkills(),
+                Items = Items()
             };
         }
 
@@ -44,6 +46,15 @@
             {
                 new PassiveSkill("Eradication", 20, "You gain stats from all sources."),
                 new ActiveSkill("Ritual of Summoning",20, 25, "Begins a ritual to create a summoning portal")
+            };
+        }
+
+        protected override IList<IItem> Items()
+        {
+            return new List<IItem>
+            {
+                new Stick("Aggonizing Stick", 50),
+                new Pot("Mana Pot", 15)
             };
         }
     }

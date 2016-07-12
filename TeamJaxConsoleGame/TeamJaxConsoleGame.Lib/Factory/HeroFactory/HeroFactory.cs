@@ -12,5 +12,7 @@
         protected abstract IList<IAbility> DefinedHeroAbilities();
 
         protected abstract IList<ISkill> DefinedHeroSkills();
+
+        protected abstract IList<IItem> Items();
     }
 }

@@ -1,13 +1,14 @@
 ﻿namespace TeamJaxConsoleGame.Lib.Factory.HeroFactory.ClassesFactory
 {
-    using Constants;
-    using Entities;
-    using Entities.HeroClasses;
-    using Enumerations;
     using System.Collections.Generic;
-    using Interfaces;
+    using Constants;
+    using Entities;     
     using Entities.Abilities;
+    using Entities.HeroClasses;
+    using Entities.Items;
     using Entities.Skills;
+    using Enumerations;
+    using Interfaces;
 
     public class MageFactory : HeroFactory
     {
@@ -23,7 +24,8 @@
                 HeroConstants.MAGE_ARMOR_RATING)
             {
                 Abilities = DefinedHeroAbilities(),
-                Skills = DefinedHeroSkills()
+                Skills = DefinedHeroSkills(),
+                Items = Items()
             };
         }
 
@@ -45,6 +47,16 @@
             {
                 new PassiveSkill("Arcane Brilliance",50,"Infuses the target with arcane brilliance inscreasting their power!"),
                 new ActiveSkill("Summon Water Elementa", 15, 40,"Summons a water elemental to fight for the caster!")
+            };
+        }
+
+        protected override IList<IItem> Items()
+        {
+            return new List<IItem>
+            {
+                new Stick("Abberator", 200),
+                new Pot("Healing pot", 5),
+                new Pot("Mana pot", 10)
             };
         }
     }
