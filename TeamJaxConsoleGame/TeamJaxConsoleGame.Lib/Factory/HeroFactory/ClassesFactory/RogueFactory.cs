@@ -29,7 +29,7 @@
                 new DamageAbility("Mutilate",5, 10, "Attack with both weapons, dealing damage with the main-hand and damage with the off-hand."),
                 new DamageAbility("Backstab", 10, 10, "Backstab the target, causing Physical damage.  Must not be in front of the target"),
                 new DamageAbility("Killing Spree", 20, 25, "Destroying evertyhing spreee physical dmg everywhere!"),
-                new HealAbility("Recuperate", 10, 15, "Finishing move that restores 3% of maximum health every 3 sec")
+                new HealAbility("Recuperate", 10, 15, "Finishing move that restores of maximum health every 3 sec")
             };
         }
 

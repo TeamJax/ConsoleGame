@@ -6,9 +6,10 @@ namespace TeamJaxConsoleGame.Lib.Factory.HeroFactory.ClassesFactory
     using Constants;
     using Entities;
     using Entities.HeroClasses;
-    using Enumerations;  
+    using Enumerations;
     using Interfaces;
-
+    using Entities.Abilities;
+    using Entities.Skills;
     public class WarriorFactory : HeroFactory
     {
         public override Hero CreateHero(string name, RaceType race)
@@ -25,12 +26,22 @@ namespace TeamJaxConsoleGame.Lib.Factory.HeroFactory.ClassesFactory
 
         public override IList<IAbility> DefinedHeroAbilities()
         {
-            throw new System.NotImplementedException();
+            return new List<IAbility>
+            {
+                new DamageAbility("Mortal Strike", 5, 10, "A vicious strike that deals Physical damage!"),
+                new DamageAbility("Slam", 10, 15, "Slam an opponent, causing Physical damage."),
+                new DamageAbility("Sweeping Strikes", 15, 20, "Your melee attacks strike an additional nearby opponent for damage"),
+                new HealAbility("Revenge", 10, 10, "Your attacks heal you for the damage dealth")
+            };
         }
 
         public override IList<ISkill> DefinedHeroSkills()
         {
-            throw new System.NotImplementedException();
+            return new List<ISkill>
+            {
+                new PassiveSkill("Battle Shout", 15, "Increases the stats of all raid and party members!"),
+                new ActiveSkill("BloodThirst", 10, 25, "Instantly strike the target for Physical damage")
+            };
         }
     }
 }
