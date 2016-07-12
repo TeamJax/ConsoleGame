@@ -1,7 +1,6 @@
-﻿using System;
-
-namespace TeamJaxConsoleGame.Lib.Entities.Skills
+﻿namespace TeamJaxConsoleGame.Lib.Entities.Skills
 {
+    using System;
     using Interfaces;
     using Skills.Abstract;
     using Enumerations;
@@ -10,8 +9,8 @@ namespace TeamJaxConsoleGame.Lib.Entities.Skills
     {
         public int Power { get; set; }
 
-        public ActiveSkill(string name, int power, int successChance)
-            : base(name, successChance)
+        public ActiveSkill(string name, int power, int successChance, string description)
+            : base(name, successChance, description)
         {
             this.Power = power;
         }

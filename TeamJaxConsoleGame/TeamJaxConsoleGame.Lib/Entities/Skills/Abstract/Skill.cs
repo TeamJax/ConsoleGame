@@ -1,17 +1,20 @@
-﻿using TeamJaxConsoleGame.Lib.Interfaces;
-
-namespace TeamJaxConsoleGame.Lib.Entities.Skills.Abstract
+﻿namespace TeamJaxConsoleGame.Lib.Entities.Skills.Abstract
 {
     using System;
+    using Common;
+    using Constants;
+    using Interfaces;
 
     public abstract class Skill : GameObject, ISkill
     {   
         private int successChance;
+        private string description;
 
-        protected Skill(string name, int successChance)
+        protected Skill(string name, int successChance, string description)
             : base(name)
         {
             this.SuccessChance = successChance;
+            this.Description = description;
         }    
 
         public int SuccessChance
@@ -32,9 +35,18 @@ namespace TeamJaxConsoleGame.Lib.Entities.Skills.Abstract
             }
         }
 
-        public override string GiveDescription()
+        public string Description
         {
-            return string.Format($"Your {this.Name} has a {this.successChance}% chance to be performed.");
+            get
+            {
+                return this.description;                
+            }
+
+            set
+            {
+                Validator.CheckIfStringIsNullOrEmpty(value, string.Format(ValidatorConstants.ValueCannotBeNull, "Skill description"));
+                this.description = value;                
+            }
         }
     }
 }
