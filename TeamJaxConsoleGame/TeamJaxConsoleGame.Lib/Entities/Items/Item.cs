@@ -3,7 +3,8 @@
     using Enumerations;
     using Interfaces;
 
-    public abstract class Item : GameObject, IItem
+    public 
+        class Item : GameObject, IItem
     {
         public int Price { get; protected set; }
         public ItemType ItemType { get; set; }
