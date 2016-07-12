@@ -3,9 +3,8 @@
     using System;
     using System.Collections.Generic;
     using System.Text;
-
-    using Factory;
     using Interfaces;
+    using Factory.LocationEntitiesFactory;
 
     /// <summary>
     /// The different locations in the game where the player can travel around

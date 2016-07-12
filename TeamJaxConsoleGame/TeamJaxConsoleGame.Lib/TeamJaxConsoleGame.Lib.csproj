@@ -42,7 +42,6 @@
   <ItemGroup>
     <Compile Include="Common\Validator.cs" />
     <Compile Include="Constants\HeroConstants.cs" />
-    <Compile Include="Constants\LocationConstants.cs" />
     <Compile Include="Constants\ValidatorConstants.cs" />
     <Compile Include="Entities\Abilities\Abstract\Ability.cs" />
     <Compile Include="Entities\Abilities\DamageAbility.cs" />
@@ -59,6 +58,10 @@
     <Compile Include="Entities\HeroClasses\Rogue.cs" />
     <Compile Include="Entities\HeroClasses\Warlock.cs" />
     <Compile Include="Entities\HeroClasses\Warrior.cs" />
+    <Compile Include="Enumerations\Locations.cs" />
+    <Compile Include="Factory\LocationEntitiesFactory\EasternKingdomsFactory.cs" />
+    <Compile Include="Factory\LocationEntitiesFactory\PandariaFactory.cs" />
+    <Compile Include="Factory\LocationFactory\LocationCreater.cs" />
     <Compile Include="Interfaces\IItem.cs" />
     <Compile Include="Entities\Items\Item.cs" />
     <Compile Include="Entities\Items\Knife.cs" />
@@ -80,8 +83,8 @@
     <Compile Include="Enumerations\PrimaryHeroStatsType.cs" />
     <Compile Include="Enumerations\RaceType.cs" />
     <Compile Include="Enumerations\ResourceType.cs" />
-    <Compile Include="Factory\ForestFactory.cs" />
-    <Compile Include="Factory\GameFactory.cs" />
+    <Compile Include="Factory\LocationEntitiesFactory\NorthrendFactory.cs" />
+    <Compile Include="Factory\LocationEntitiesFactory\GameFactory.cs" />
     <Compile Include="Factory\GameSceneFactory\BattleSceneFactory.cs" />
     <Compile Include="Factory\GameSceneFactory\GameSceneFactory.cs" />
     <Compile Include="Factory\GameSceneFactory\InventorySceneFactory.cs" />
@@ -99,8 +102,13 @@
     <Compile Include="Factory\HeroFactory\ClassesFactory\WarriorFactory.cs" />
     <Compile Include="Factory\HeroFactory\HeroCreater.cs" />
     <Compile Include="Factory\HeroFactory\HeroFactory.cs" />
-    <Compile Include="Factory\TownFactory.cs" />
+    <Compile Include="Factory\LocationEntitiesFactory\KalimdorFactory.cs" />
     <Compile Include="GameEngine.cs" />
+    <Compile Include="Resources\LocationResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LocationResources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Scenes\BattleScene.cs" />
     <Compile Include="Interfaces\ISkill.cs" />
     <Compile Include="Scenes\GameScene.cs" />
@@ -133,10 +141,17 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>GameScreenResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\LocationResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LocationResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\TownOptionsMenu.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>TownOptionsMenu.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TeamJaxConsoleGameClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

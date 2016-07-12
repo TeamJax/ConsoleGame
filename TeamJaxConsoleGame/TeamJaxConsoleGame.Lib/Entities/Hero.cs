@@ -161,7 +161,7 @@
 
         public override string GiveDescription()
         {
-            return string.Format("You are {0}. A {1} {2}. Another great hero seeking fortune and fame in the land of Teleriknia.", this.Name, this.Race, this.HeroType);
+            return string.Format("You are {0}. A {1} {2}. Another great hero seeking fortune and fame in the land of Teleriknia.", this.Name, this.Race.ToString(), this.HeroType.ToString());
         }
 
     }

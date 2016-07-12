@@ -1,16 +1,17 @@
 ﻿namespace TeamJaxConsoleGame.Lib
 {
+    using System;
+
     using Constants;
     using Entities;
     using Entities.Items;
     using Enumerations;
-    using Factory;
     using Factory.GameSceneFactory;
     using Factory.HeroFactory;
+    using Factory.LocationEntitiesFactory;
     using Scenes;
     using ScreenText;
-    using System;
-
+    using Factory.LocationFactory;
     public abstract class GameEngine
     {
         private static Hero playerHero;
@@ -23,10 +24,11 @@
             Play();
         }
 
-        protected static void InitializeStartingScene(SceneCreater sceneCreater)
+        protected static void InitializeStartingScene(SceneCreater sceneCreater, LocationCreater locationCreater)
         {
-            GameFactory locationFactory = new TownFactory();
-            var startingLocation = new Location(LocationConstants.INIT_LOCATION_NAME, LocationConstants.INIT_LOCATION_DESCRIPTION, locationFactory);
+            //var locationCreater = new LocationCreater();
+            //GameFactory locationFactory = new KalimdorFactory();
+            var startingLocation = locationCreater.CreateLocation(Locations.Kalimdor); // new Location(LocationConstants.INIT_LOCATION_NAME, LocationConstants.INIT_LOCATION_DESCRIPTION, locationFactory);
 
             startingLocation.LocationObjects.Add(startingLocation.LocationFacotry.CreateEnemyEntity());
             currentScene = sceneCreater.CreateScene(GameSceneType.Town, playerHero, startingLocation);// sceneFactory.CreateScene(playerHero, startingLocation);
@@ -48,7 +50,8 @@
         {
             CreateHero();
             var sceneCreater = new SceneCreater();
-            InitializeStartingScene(sceneCreater);
+            var locationCreater = new LocationCreater();
+            InitializeStartingScene(sceneCreater, locationCreater);
             var selectedSceneType = currentScene.SceneType;
 
             while (true)

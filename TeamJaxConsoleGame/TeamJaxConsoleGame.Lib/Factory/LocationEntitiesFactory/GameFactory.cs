@@ -1,6 +1,5 @@
-﻿namespace TeamJaxConsoleGame.Lib.Factory
+﻿namespace TeamJaxConsoleGame.Lib.Factory.LocationEntitiesFactory
 {
-    using Entities;
     using Interfaces;
 
     ///<summary>
