@@ -9,8 +9,8 @@
     {
         public abstract Hero CreateHero(string name, RaceType race);
 
-        public abstract IList<IAbility> DefinedHeroAbilities();
+        protected abstract IList<IAbility> DefinedHeroAbilities();
 
-        public abstract IList<ISkill> DefinedHeroSkills();
+        protected abstract IList<ISkill> DefinedHeroSkills();
     }
 }

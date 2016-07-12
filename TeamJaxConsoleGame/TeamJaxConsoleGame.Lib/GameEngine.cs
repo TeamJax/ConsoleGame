@@ -40,7 +40,7 @@
             var heroCreater = new HeroCreater();
 
             playerHero = heroCreater.CreateHero(userHeroNameInput, selectedHeroRace, selectedHeroType);
-            playerHero.Items.Add(new Stick("Starting Toqga", 0, 10));
+            playerHero.Items.Add(new Stick("Starting Toqga", 0));
         }
 
         private static void Play()

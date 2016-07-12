@@ -30,7 +30,7 @@
             return heroToCreate;
         }
 
-        public override IList<IAbility> DefinedHeroAbilities()
+        protected override IList<IAbility> DefinedHeroAbilities()
         {
             return new List<IAbility>
             {
@@ -41,7 +41,7 @@
             };
         }
 
-        public override IList<ISkill> DefinedHeroSkills()
+        protected override IList<ISkill> DefinedHeroSkills()
         {
             return new List<ISkill>
             {

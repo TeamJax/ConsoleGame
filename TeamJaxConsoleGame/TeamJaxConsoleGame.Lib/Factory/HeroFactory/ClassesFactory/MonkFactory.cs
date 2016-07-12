@@ -20,10 +20,14 @@
                 HeroConstants.MONK_STRENGTH,
                 HeroConstants.MONK_INTELLIGENCE,
                 HeroConstants.MONK_AGILITY,
-                HeroConstants.MONK_ARMOR_RATING);
+                HeroConstants.MONK_ARMOR_RATING)
+            {
+                Abilities = DefinedHeroAbilities(),
+                Skills = DefinedHeroSkills()
+            };
         }
 
-        public override IList<IAbility> DefinedHeroAbilities()
+        protected override IList<IAbility> DefinedHeroAbilities()
         {
             return new List<IAbility>
             {
@@ -34,7 +38,7 @@
             };
         }
 
-        public override IList<ISkill> DefinedHeroSkills()
+        protected override IList<ISkill> DefinedHeroSkills()
         {
             return new List<ISkill>
             {

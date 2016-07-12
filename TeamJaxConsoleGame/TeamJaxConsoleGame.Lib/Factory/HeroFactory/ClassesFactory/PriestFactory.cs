@@ -20,10 +20,14 @@
                 HeroConstants.PRIEST_STRENGTH,
                 HeroConstants.PRIEST_INTELLIGENCE,
                 HeroConstants.PRIEST_AGILITY,
-                HeroConstants.PRIEST_ARMOR_RATING);
+                HeroConstants.PRIEST_ARMOR_RATING)
+            {
+                Abilities = DefinedHeroAbilities(),
+                Skills = DefinedHeroSkills()
+            };
         }
 
-        public override IList<IAbility> DefinedHeroAbilities()
+        protected override IList<IAbility> DefinedHeroAbilities()
         {
             return new List<IAbility>
             {
@@ -34,7 +38,7 @@
             };
         }
 
-        public override IList<ISkill> DefinedHeroSkills()
+        protected override IList<ISkill> DefinedHeroSkills()
         {
             return new List<ISkill>
             {
