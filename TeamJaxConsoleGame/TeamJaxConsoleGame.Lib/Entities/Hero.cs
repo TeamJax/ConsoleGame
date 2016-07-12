@@ -146,13 +146,13 @@
 
         private int ResourceCapacity
         {
-            get
-            {
-                return this.resourceCapacity;
-            }
-
+            get {  return this.resourceCapacity; }
             set
             {
+                Validator.ValidateIntRange(value, ValidatorConstants.MinStatLength, ValidatorConstants.MaxStatLength,
+                    string.Format(ValidatorConstants.NumbersMustBeBetweenMinAndMax,
+                    "ResourceCapacity", ValidatorConstants.MinStatLength, ValidatorConstants.MaxStatLength));
+
                 this.resourceCapacity = value;
             }
         }
