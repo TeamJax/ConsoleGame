@@ -133,9 +133,7 @@
     <Compile Include="Scenes\TravelScene.cs" />
     <Compile Include="ScreenText\GameScreen.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ExtensionMethods\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Resources\GameScreenResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
