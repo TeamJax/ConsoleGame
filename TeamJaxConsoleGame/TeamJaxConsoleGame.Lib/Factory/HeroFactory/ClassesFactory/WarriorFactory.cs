@@ -1,6 +1,4 @@
-﻿
-
-namespace TeamJaxConsoleGame.Lib.Factory.HeroFactory.ClassesFactory
+﻿namespace TeamJaxConsoleGame.Lib.Factory.HeroFactory.ClassesFactory
 {
     using System.Collections.Generic;
     using Constants;
@@ -10,6 +8,7 @@ namespace TeamJaxConsoleGame.Lib.Factory.HeroFactory.ClassesFactory
     using Interfaces;
     using Entities.Abilities;
     using Entities.Skills;
+
     public class WarriorFactory : HeroFactory
     {
         public override Hero CreateHero(string name, RaceType race)

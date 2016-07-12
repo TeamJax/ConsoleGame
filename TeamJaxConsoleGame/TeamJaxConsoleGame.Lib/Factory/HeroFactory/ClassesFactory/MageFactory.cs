@@ -8,6 +8,7 @@
     using Interfaces;
     using Entities.Abilities;
     using Entities.Skills;
+
     public class MageFactory : HeroFactory
     {
         public override Hero CreateHero(string name, RaceType race)
